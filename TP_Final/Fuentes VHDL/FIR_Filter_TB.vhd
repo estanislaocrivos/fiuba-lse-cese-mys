@@ -36,6 +36,8 @@ architecture FIR_Filter_TB_Architecture of FIR_Filter_TB is
 		Port (
 			clk : in STD_LOGIC;
 			reset : in STD_LOGIC;
+			A_0 : in STD_LOGIC; 				
+       		A_1 : in STD_LOGIC; 				
 			input_data : in UNSIGNED(9 downto 0);
 			output_data : out UNSIGNED(31 downto 0)
 		);
@@ -43,7 +45,9 @@ architecture FIR_Filter_TB_Architecture of FIR_Filter_TB is
 
 	-- Declare Test Bench signals
 	signal clock_TB : std_logic := '0';
-	signal reset_TB : std_logic := '1';
+	signal reset_TB : std_logic := '0';
+	signal A_0_TB : std_logic := '0';
+	signal A_1_TB : std_logic := '0';
 	signal paso1_TB : unsigned(7 downto 0) := "00011001";
 	signal paso2_TB : unsigned(7 downto 0) := "10110011";
 	signal paso3_TB : unsigned(7 downto 0) := "10110100";
@@ -67,8 +71,40 @@ architecture FIR_Filter_TB_Architecture of FIR_Filter_TB is
 
 begin
 	
-	reset_TB <= '0' after 1 us;
-	
+	-- Start filtering
+	-- reset_TB <= '0' after 1 ns;
+
+	test_process : process
+	begin
+		-- Switch to A = 01
+		wait for 450 us;
+		reset_TB <= '1';
+		wait for 5 us;
+		A_0_TB <= '1';
+		A_1_TB <= '0';
+		wait for 10 us;
+		reset_TB <= '0';
+
+		-- Switch to A = 10
+		wait for 450 us;
+		reset_TB <= '1';
+		wait for 5 us;
+		A_0_TB <= '0';
+		A_1_TB <= '1';
+		wait for 10 us;
+		reset_TB <= '0';
+
+		-- Switch to A = 11
+		wait for 450 us;
+		reset_TB <= '1';
+		wait for 5 us;
+		A_0_TB <= '1';
+		A_1_TB <= '1';
+		wait for 10 us;
+		reset_TB <= '0';
+		
+	end process test_process;
+
 	-- Clocking process (1MHz clock)
 	clock_process : process
 	begin
@@ -82,6 +118,8 @@ begin
 		(
 			clk => clock_TB,
 			reset => reset_TB,
+			A_0 => A_0_TB,
+			A_1 => A_1_TB,
 			input_data => filter_input_TB,
 			output_data => filter_output_TB
 		);
