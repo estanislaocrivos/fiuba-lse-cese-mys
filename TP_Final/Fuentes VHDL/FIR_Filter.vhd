@@ -12,6 +12,8 @@ entity FIR_Filter is
 	(
         clk : in STD_LOGIC; 					-- Filter clock input
         reset : in STD_LOGIC; 					-- Filter reset input (0 is operative)
+        A_0 : in STD_LOGIC; 					-- Filer coeff. selector bit 0
+        A_1 : in STD_LOGIC; 					-- Filer coeff. selector bit 1
         input_data : in UNSIGNED(9 downto 0); 	-- Filter input
         output_data : out UNSIGNED(31 downto 0) -- Filter output
     );
@@ -22,8 +24,8 @@ architecture FIR_Filter_Architecture of FIR_Filter is
     -- Filter coefficients array type declaration
     type coef_array is array (0 to 12) of UNSIGNED(15 downto 0);
 
-    -- Filter coefficients array definition
-    constant coefficients : coef_array := (
+    -- Filter coefficients array definition (cutoff frequency = 100MHz)
+    constant coefficients_00 : coef_array := (
         to_unsigned(0, 16),
         to_unsigned(0, 16),
         to_unsigned(75, 16),
@@ -39,6 +41,57 @@ architecture FIR_Filter_Architecture of FIR_Filter is
         to_unsigned(0, 16)
     );
 
+    -- Filter coefficients array definition (cutoff frequency = 200MHz)
+    constant coefficients_01 : coef_array := (
+        to_unsigned(0, 16),
+        to_unsigned(0, 16),
+        to_unsigned(87, 16),
+        to_unsigned(189, 16),
+        to_unsigned(525, 16),
+        to_unsigned(2410, 16),
+        to_unsigned(3565, 16),
+        to_unsigned(2410, 16),
+        to_unsigned(525, 16),
+        to_unsigned(189, 16),
+        to_unsigned(87, 16),
+        to_unsigned(0, 16),
+        to_unsigned(0, 16)
+    );
+
+    -- Filter coefficients array definition (cutoff frequency = 300MHz)
+    constant coefficients_10 : coef_array := (
+        to_unsigned(0, 16),
+        to_unsigned(0, 16),
+        to_unsigned(74, 16),
+        to_unsigned(161, 16),
+        to_unsigned(446, 16),
+        to_unsigned(2045, 16),
+        to_unsigned(4540, 16),
+        to_unsigned(2045, 16),
+        to_unsigned(446, 16),
+        to_unsigned(161, 16),
+        to_unsigned(74, 16),
+        to_unsigned(0, 16),
+        to_unsigned(0, 16)
+    );
+
+    -- Filter coefficients array definition (cutoff frequency = 400MHz)
+    constant coefficients_11 : coef_array := (
+        to_unsigned(0, 16),
+        to_unsigned(0, 16),
+        to_unsigned(43, 16),
+        to_unsigned(243, 16),
+        to_unsigned(677, 16),
+        to_unsigned(1186, 16),
+        to_unsigned(5685, 16),
+        to_unsigned(1186, 16),
+        to_unsigned(677, 16),
+        to_unsigned(243, 16),
+        to_unsigned(43, 16),
+        to_unsigned(0, 16),
+        to_unsigned(0, 16)
+    );
+
     -- Delay line type declaration. This is where delayed samples will be stored
     type delay_line_type is array (0 to 12) of UNSIGNED(9 downto 0);
 
@@ -48,7 +101,25 @@ architecture FIR_Filter_Architecture of FIR_Filter is
     -- Accumulator signal. This is where the sum of the products coeffs*samples will be stored
     signal accumulator : UNSIGNED(28 downto 0) := (others => '0');
 
+    -- Coefficients signal. This is where the filter coefficients will be stored
+    signal coefficients : coef_array := (others => (others => '0'));
+
 begin
+
+    process (A_0, A_1)
+    begin
+        if A_0 = '0' and A_1 = '0' then
+            coefficients <= coefficients_00;
+        elsif A_0 = '1' and A_1 = '0' then
+            coefficients <= coefficients_01;
+        elsif A_0 = '0' and A_1 = '1' then
+            coefficients <= coefficients_10;
+        elsif A_0 = '1' and A_1 = '1' then
+            coefficients <= coefficients_11;
+        else
+            coefficients <= (others => (others => '0'));
+        end if;
+    end process;
 
     process (clk, reset)
         -- Temporal accumulator for calculating the MAC operations
@@ -74,6 +145,7 @@ begin
             temp_accumulator := (others => '0');
             for i in 0 to 12 loop
                 temp_accumulator := temp_accumulator + coefficients(i) * delay_line(i);
+                -- temp_accumulator := temp_accumulator + RESIZE(coefficients(i) * delay_line(i), temp_accumulator'LENGTH);
             end loop;
 
             -- Update the accumulator value

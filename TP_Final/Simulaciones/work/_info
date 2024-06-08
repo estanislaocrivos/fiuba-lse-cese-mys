@@ -7,27 +7,27 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/Sistema Completo_FIR02/Simulaciones
+dC:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/Simulaciones
 Eacum_fase
-Z0 w1637266339
+Z0 w1717541573
 Z1 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z5 dC:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/Simulaciones
-Z6 8C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/acum_fase.vhd
-Z7 FC:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/acum_fase.vhd
+Z5 dC:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Simulaciones
+Z6 8C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/acum_fase.vhd
+Z7 FC:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/acum_fase.vhd
 l0
 L11
 VS7M[2lT2h8SK_cPh7?9BE2
 !s100 QOLe_ZFWDABGhCI6N9IR:0
 Z8 OV;C;10.5b;63
 32
-Z9 !s110 1713824395
+Z9 !s110 1717556487
 !i10b 1
-Z10 !s108 1713824395.000000
-Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/acum_fase.vhd|
-Z12 !s107 C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/acum_fase.vhd|
+Z10 !s108 1717556487.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/acum_fase.vhd|
+Z12 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/acum_fase.vhd|
 !i113 1
 Z13 o-work work -2002 -explicit
 Z14 tExplicit 1 CvgOpt 0
@@ -52,24 +52,24 @@ R12
 R13
 R14
 Efir_filter
-Z15 w1713824362
+Z15 w1717555719
 R2
 R3
 R4
 R5
-Z16 8C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/Fuentes/FIR_Filter.vhd
-Z17 FC:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/Fuentes/FIR_Filter.vhd
+Z16 8C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter.vhd
+Z17 FC:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter.vhd
 l0
 L10
-V]aijKd3`KCg`E7XEd:WWB1
-!s100 zo6]D;VeW^cRf;YgA[:d83
+V`[I]YNTT7GolQciYz^z]_1
+!s100 ]eOC31EMS_P2_G>fiD?TQ1
 R8
 32
-Z18 !s110 1713824394
+R9
 !i10b 1
-Z19 !s108 1713824394.000000
-Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/Fuentes/FIR_Filter.vhd|
-Z21 !s107 C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/Fuentes/FIR_Filter.vhd|
+R10
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter.vhd|
+Z19 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter.vhd|
 !i113 1
 R13
 R14
@@ -77,50 +77,30 @@ Afir_filter_architecture
 R2
 R3
 R4
-DEx4 work 10 fir_filter 0 22 ]aijKd3`KCg`E7XEd:WWB1
-l51
-L20
-V4@k7mh5LoNUGJXBhf8=K03
-!s100 BdGH0<e]4>Ya^MH0[MCQg3
+DEx4 work 10 fir_filter 0 22 `[I]YNTT7GolQciYz^z]_1
+l107
+L22
+Vdj2XUzG`IFKL_fYIcm=F73
+!s100 mmHal:?68bR4m^>DGRAbB2
 R8
 32
+R9
+!i10b 1
+R10
 R18
-!i10b 1
 R19
-R20
-R21
 !i113 1
 R13
 R14
-Abehavioral
-R2
-R3
-R4
-DEx4 work 10 fir_filter 0 22 N^B4@QK@R;8HA5P>15iFU0
-l45
-L14
-Vgzg_lC77@PoS7=0WB<Pk43
-!s100 ^Yf8jM`3DBgZ[jmH21C961
-R8
-32
-!s110 1713822876
-!i10b 1
-!s108 1713822876.000000
-R20
-R21
-!i113 1
-R13
-R14
-w1713822236
 Efir_filter_tb
-Z22 w1713824366
+Z20 w1717556480
 R1
 R2
 R3
 R4
 R5
-Z23 8C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/Fuentes/FIR_Filter_TB.vhd
-Z24 FC:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/Fuentes/FIR_Filter_TB.vhd
+Z21 8C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_TB.vhd
+Z22 FC:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_TB.vhd
 l0
 L11
 VkSEW1<g=zMzmX3:KlkWnB0
@@ -130,8 +110,8 @@ R8
 R9
 !i10b 1
 R10
-Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/Fuentes/FIR_Filter_TB.vhd|
-Z26 !s107 C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/Fuentes/FIR_Filter_TB.vhd|
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_TB.vhd|
+Z24 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_TB.vhd|
 !i113 1
 R13
 R14
@@ -141,29 +121,29 @@ R2
 R3
 R4
 DEx4 work 13 fir_filter_tb 0 22 kSEW1<g=zMzmX3:KlkWnB0
-l68
+l72
 L15
-VkLCKifEhOQ15IO@Udagdb2
-!s100 WSbAXV4e1<O>0]2V>71A73
+V=HEe;El@54iAILfhH296]1
+!s100 gl:5X:@^3b=AecU=1KTP21
 R8
 32
 R9
 !i10b 1
 R10
-R25
-R26
+R23
+R24
 !i113 1
 R13
 R14
 Enco
-Z27 w1637266276
+R0
 R1
 R2
 R3
 R4
 R5
-Z28 8C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/nco.vhd
-Z29 FC:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/nco.vhd
+Z25 8C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco.vhd
+Z26 FC:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco.vhd
 l0
 L11
 V3gjeNN3CMXDIFL0iX<F>90
@@ -173,8 +153,8 @@ R8
 R9
 !i10b 1
 R10
-Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/nco.vhd|
-Z31 !s107 C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/nco.vhd|
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco.vhd|
+Z28 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco.vhd|
 !i113 1
 R13
 R14
@@ -193,20 +173,63 @@ R8
 R9
 !i10b 1
 R10
-R30
-R31
+R27
+R28
 !i113 1
 R13
 R14
-Enco_tb
-Z32 w1712890030
+Enco_multifrequency_tb
+R0
 R1
 R2
 R3
 R4
 R5
-Z33 8C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/nco_TB.vhd
-Z34 FC:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/nco_TB.vhd
+Z29 8C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco_multifrequency_TB.vhd
+Z30 FC:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco_multifrequency_TB.vhd
+l0
+L11
+VV_1VR7Yh]1l>fNZKQ]8i]1
+!s100 S[3;=Qb;13@oKG`O3Mhj60
+R8
+32
+R9
+!i10b 1
+R10
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco_multifrequency_TB.vhd|
+Z32 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco_multifrequency_TB.vhd|
+!i113 1
+R13
+R14
+Anco_multifrequency_tb_architecture
+R1
+R2
+R3
+R4
+DEx4 work 21 nco_multifrequency_tb 0 22 V_1VR7Yh]1l>fNZKQ]8i]1
+l80
+L15
+VBYdLI?;UdifH_zH`hnJz?1
+!s100 oJmfUj2cKfS;SLb_4JkT]3
+R8
+32
+R9
+!i10b 1
+R10
+R31
+R32
+!i113 1
+R13
+R14
+Enco_tb
+R0
+R1
+R2
+R3
+R4
+R5
+Z33 8C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco_TB.vhd
+Z34 FC:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco_TB.vhd
 l0
 L11
 VGggni8zcIN<G1MDA<NmVX3
@@ -216,8 +239,8 @@ R8
 R9
 !i10b 1
 R10
-Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/nco_TB.vhd|
-Z36 !s107 C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/nco_TB.vhd|
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco_TB.vhd|
+Z36 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco_TB.vhd|
 !i113 1
 R13
 R14
@@ -242,14 +265,14 @@ R36
 R13
 R14
 Enco_vio_ila
-Z37 w1637272968
+R0
 R1
 R2
 R3
 R4
 R5
-Z38 8C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/nco_VIO_ILA.vhd
-Z39 FC:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/nco_VIO_ILA.vhd
+Z37 8C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco_VIO_ILA.vhd
+Z38 FC:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco_VIO_ILA.vhd
 l0
 L11
 VSR58IN@[G>1N9;:36S3OO3
@@ -259,8 +282,8 @@ R8
 R9
 !i10b 1
 R10
-Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/nco_VIO_ILA.vhd|
-Z41 !s107 C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/nco_VIO_ILA.vhd|
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco_VIO_ILA.vhd|
+Z40 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/nco_VIO_ILA.vhd|
 !i113 1
 R13
 R14
@@ -279,19 +302,19 @@ R8
 R9
 !i10b 1
 R10
+R39
 R40
-R41
 !i113 1
 R13
 R14
 Esin_cos
-Z42 w1426260118
+R0
 R2
 R3
 R4
 R5
-Z43 8C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/sin_cos.vhd
-Z44 FC:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/sin_cos.vhd
+Z41 8C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/sin_cos.vhd
+Z42 FC:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/sin_cos.vhd
 l0
 L5
 VnM_NPn[XH;[EdB1hXVE@D3
@@ -301,8 +324,8 @@ R8
 R9
 !i10b 1
 R10
-Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/sin_cos.vhd|
-Z46 !s107 C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/sin_cos.vhd|
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/sin_cos.vhd|
+Z44 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/sin_cos.vhd|
 !i113 1
 R13
 R14
@@ -320,31 +343,31 @@ R8
 R9
 !i10b 1
 R10
-R45
-R46
+R43
+R44
 !i113 1
 R13
 R14
 Esin_rom
-Z47 w1354129298
+R0
 R1
 R2
 R3
 R4
 R5
-Z48 8C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/sin_rom.vhd
-Z49 FC:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/sin_rom.vhd
+Z45 8C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/sin_rom.vhd
+Z46 FC:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/sin_rom.vhd
 l0
 L11
 VG_0NodMBX9Q4]HboGUh_Z2
 !s100 UdfPYF[H>oXYiS4Jol[Ml3
 R8
 32
-R9
+Z47 !s110 1717556488
 !i10b 1
 R10
-Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/sin_rom.vhd|
-Z51 !s107 C:/Users/Lenovo/Desktop/CESE/CLP/TP_Final/NCO/Fuentes/sin_rom.vhd|
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/sin_rom.vhd|
+Z49 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/NCO/Fuentes/sin_rom.vhd|
 !i113 1
 R13
 R14
@@ -353,61 +376,18 @@ R1
 R2
 R3
 R4
-Z52 DEx4 work 7 sin_rom 0 22 G_0NodMBX9Q4]HboGUh_Z2
+Z50 DEx4 work 7 sin_rom 0 22 G_0NodMBX9Q4]HboGUh_Z2
 l58
 L25
-Z53 VYM9[TU1DJGf`8j2PeNoSz0
-Z54 !s100 GU?9iBIHmc^<:SjfR54>k2
+Z51 VYM9[TU1DJGf`8j2PeNoSz0
+Z52 !s100 GU?9iBIHmc^<:SjfR54>k2
 R8
 32
-R9
+R47
 !i10b 1
 R10
-R50
-R51
-!i113 1
-R13
-R14
-Esistema_completo_02_tb
-Z55 w1713822812
-R1
-R2
-R3
-R4
-R5
-R23
-R24
-l0
-L11
-V>mF[?@nYFzLiJ3RoffoKT0
-!s100 0iRkM^l3O`WaNLBT51>J^3
-R8
-32
-Z56 !s110 1713822823
-!i10b 1
-Z57 !s108 1713822823.000000
-R25
-R26
-!i113 1
-R13
-R14
-Asistema_completo_02_tb_arch
-R1
-R2
-R3
-R4
-DEx4 work 22 sistema_completo_02_tb 0 22 >mF[?@nYFzLiJ3RoffoKT0
-l69
-L15
-VEDm[H]88=f_fJ0dQ6Shfg1
-!s100 `Y9g`RYX65T=dcU7VHkNR1
-R8
-32
-R56
-!i10b 1
-R57
-R25
-R26
+R48
+R49
 !i113 1
 R13
 R14
