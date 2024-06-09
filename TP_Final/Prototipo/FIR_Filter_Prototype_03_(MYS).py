@@ -41,10 +41,10 @@ def input_signal(f, f_sampling, N):
     t = np.linspace(0, (N-1)/f_sampling, N)
 
     # Signal
-    x = np.cos(2 * np.pi * f * t) 
+    x = np.sin(2 * np.pi * f * t) 
 
     # Add harmonics
-    x = x + np.cos(2 * np.pi * 349610 * t) + np.cos(2 * np.pi * 351563 * t) + np.cos(2 * np.pi * 353516 * t) + np.cos(2 * np.pi * 355469 * t) + np.cos(2 * np.pi * 357422 * t)
+    x = x + np.sin(2 * np.pi * 349610 * t) + np.sin(2 * np.pi * 351563 * t) + np.sin(2 * np.pi * 353516 * t) + np.sin(2 * np.pi * 355469 * t) + np.sin(2 * np.pi * 357422 * t)
 
     # Add DC component
     x = x + 6;
@@ -122,7 +122,7 @@ def plot_fir_response(h, f_sampling):
     plt.subplots_adjust(hspace=0.5)
 
     # Save plot as .png file and display it
-    plt.savefig('Plots/P03_100_Plot_01.png', dpi=300) # Save plot as .png file
+    plt.savefig('Plots/P04_100_Plot_01.png', dpi=300) # Save plot as .png file
 
     # Grafica la magnitud de la respuesta en frecuencia sola
     plt.figure()
@@ -135,7 +135,7 @@ def plot_fir_response(h, f_sampling):
     plt.yticks(np.arange(-15, 82, 12)) # Set y-axis ticks
 
     # Save plot as .png file and display it
-    # plt.savefig('Plots/P03_100_Plot_02.png', dpi=300) # Save plot as .png file
+    # plt.savefig('Plots/P04_100_Plot_02.png', dpi=300) # Save plot as .png file
  
 # ---------------------------------------------------------------------------------------------- #
 
@@ -151,7 +151,7 @@ def plot_input_output(x,y):
     plt.title('Implemented Filter\'s Input Signal', fontsize=10)  # Set title and font size
     plt.xlabel('Samples', fontsize=10)  # Set x-axis label and font size
     plt.ylabel('Amplitude', fontsize=10)  # Set y-axis label and font size
-    plt.xlim([0, 400]) # Set x-axis limits
+    plt.xlim([0, 800]) # Set x-axis limits
     plt.ylim([0, 12])  # Set y-axis limits
     plt.yticks(np.arange(0, 13, 3))  # Cambia el paso según tus necesidades
     plt.grid() # Enable grid
@@ -161,7 +161,7 @@ def plot_input_output(x,y):
     plt.title('Implemented Filter\'s Output Signal', fontsize=10)  # Set title and font size
     plt.xlabel('Samples', fontsize=10)  # Set x-axis label and font size
     plt.ylabel('Amplitude', fontsize=10)  # Set y-axis label and font size
-    plt.xlim([0, 400]) # Set x-axis limits
+    plt.xlim([0, 800]) # Set x-axis limits
     plt.ylim([0, 80000])  # Set y-axis limits
     plt.yticks(np.arange(0, 80001, 20000))  # Cambia el paso según tus necesidades
     plt.grid() # Enable grid
@@ -170,7 +170,7 @@ def plot_input_output(x,y):
     plt.subplots_adjust(hspace=0.5)
 
     # Save plot as .png file and display it
-    plt.savefig('Plots/P03_100_Plot_00.png', dpi=300) # Save plot as .png file
+    plt.savefig('Plots/P04_100_Plot_00.png', dpi=300) # Save plot as .png file
 
 # ---------------------------------------------------------------------------------------------- #
 
@@ -178,7 +178,7 @@ def plot_input_output(x,y):
 
 # ---------------------------------------------------------------------------------------------- #
 
-N = 1001 # Signal length.
+N = 2001 # Signal length.
 M = 13 # Filter length.
 f = 48828 # Signal frequency.
 f_sampling = 1000000 # Sampling frequency.
