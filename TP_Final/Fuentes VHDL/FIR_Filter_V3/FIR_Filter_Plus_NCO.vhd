@@ -20,8 +20,9 @@ entity FIR_Filter_Plus_NCO is
         filter_coefficient_04 : in UNSIGNED(15 downto 0); 	-- Filter coefficient 04
         filter_coefficient_05 : in UNSIGNED(15 downto 0); 	-- Filter coefficient 05
         filter_coefficient_06 : in UNSIGNED(15 downto 0); 	-- Filter coefficient 06
+		filter_input_signal : out UNSIGNED(9 downto 0); -- Filter input
         output_data : out UNSIGNED(31 downto 0) -- Filter output
-    );
+    ); 
 end;
 
 architecture FIR_Filter_Plus_NCO_Architecture of FIR_Filter_Plus_NCO is
@@ -208,6 +209,8 @@ begin
 			salida_cos => salida6_cos,
 			salida_sen => salida6_sen
 		);
+
+	filter_input_signal <= filter_input;
 
 	-- Output signal (filter's input) is the sum of the six generated signals
 	filter_input <= unsigned(resize(unsigned(salida1_cos)/6 + unsigned(salida2_cos)/6 + unsigned(salida3_cos)/6 + unsigned(salida4_cos)/6 + unsigned(salida5_cos)/6 + unsigned(salida6_cos)/6, filter_input'length));
