@@ -1,0 +1,18 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../FIR_Filter_PL_Plus_PS.ip_user_files/bd/System/ipshared/ce22/hdl/FIR_Filter_v1_0_S_AXI.vhd" \
+"../../../../FIR_Filter_PL_Plus_PS.ip_user_files/bd/System/ipshared/ce22/src/FIR_Filter.vhd" \
+"../../../../FIR_Filter_PL_Plus_PS.ip_user_files/bd/System/ipshared/ce22/src/FIR_Filter_Plus_NCO.vhd" \
+"../../../../FIR_Filter_PL_Plus_PS.ip_user_files/bd/System/ipshared/ce22/src/acum_fase.vhd" \
+"../../../../FIR_Filter_PL_Plus_PS.ip_user_files/bd/System/ipshared/ce22/src/nco.vhd" \
+"../../../../FIR_Filter_PL_Plus_PS.ip_user_files/bd/System/ipshared/ce22/src/sin_cos.vhd" \
+"../../../../FIR_Filter_PL_Plus_PS.ip_user_files/bd/System/ipshared/ce22/src/sin_rom.vhd" \
+"../../../../FIR_Filter_PL_Plus_PS.ip_user_files/bd/System/ipshared/ce22/hdl/FIR_Filter_v1_0.vhd" \
+"../../../../FIR_Filter_PL_Plus_PS.ip_user_files/bd/System/ip/System_FIR_Filter_0_0/sim/System_FIR_Filter_0_0.vhd" \
+"../../../../FIR_Filter_PL_Plus_PS.ip_user_files/bd/System/ip/System_rst_Microcontroller_0_100M_0/sim/System_rst_Microcontroller_0_100M_0.vhd" \
+"../../../../FIR_Filter_PL_Plus_PS.ip_user_files/bd/System/sim/System.vhd" \
+"../../../../FIR_Filter_PL_Plus_PS.ip_user_files/bd/System/ip/System_vio_0_0/sim/System_vio_0_0.vhd" \
+"../../../../FIR_Filter_PL_Plus_PS.srcs/sources_1/bd/System/hdl/System_wrapper.vhd" \
+
+# Do not sort compile order
+nosort
