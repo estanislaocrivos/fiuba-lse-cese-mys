@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-// Date        : Sun Jun  9 01:53:47 2024
+// Date        : Sun Jun  9 01:53:46 2024
 // Host        : LAPTOP-66OF9HIK running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PL_Plus_PS/FIR_Filter_PL_Plus_PS.srcs/sources_1/bd/System/ip/System_FIR_Filter_0_0/System_FIR_Filter_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top System_FIR_Filter_0_0 -prefix
+//               System_FIR_Filter_0_0_ System_FIR_Filter_0_0_stub.v
 // Design      : System_FIR_Filter_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

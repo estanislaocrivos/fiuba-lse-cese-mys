@@ -1,0 +1,349 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sun Jun  9 23:50:55 2024
+# Process ID: 20136
+# Current directory: C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.runs/impl_1
+# Command line: vivado.exe -log System_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source System_wrapper.tcl -notrace
+# Log file: C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.runs/impl_1/System_wrapper.vdi
+# Journal file: C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source System_wrapper.tcl -notrace
+Command: open_checkpoint System_wrapper_placed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 230.535 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 205 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.344 . Memory (MB): peak = 1115.207 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.345 . Memory (MB): peak = 1115.207 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 58 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 52 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2018.1 (64-bit) build 2188600
+open_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 1115.207 ; gain = 884.672
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 9842d75b ConstDB: 0 ShapeSum: 99cb6601 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 948d9ec5
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1212.750 ; gain = 77.848
+Post Restoration Checksum: NetGraph: 23f95eb8 NumContArr: 7094400d Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 948d9ec5
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1212.773 ; gain = 77.871
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 948d9ec5
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1218.785 ; gain = 83.883
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 948d9ec5
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1218.785 ; gain = 83.883
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+WARNING: [Route 35-41] Unusually high hold violations were detected on a large number of pins. This may result in high router runtime.
+Phase 2.4 Update Timing | Checksum: e181f6c7
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1231.250 ; gain = 96.348
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-14.013| TNS=-696.520| WHS=-15.023| THS=-1243.614|
+
+Phase 2 Router Initialization | Checksum: 13fa61f7e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1280.438 ; gain = 145.535
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 18a60db6b
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:03:14 . Memory (MB): peak = 1303.234 ; gain = 168.332
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 1084
+ Number of Nodes with overlaps = 215
+ Number of Nodes with overlaps = 93
+ Number of Nodes with overlaps = 33
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-88.559| TNS=-2007.329| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 16ae158a7
+
+Time (s): cpu = 00:06:14 ; elapsed = 00:10:14 . Memory (MB): peak = 1321.074 ; gain = 186.172
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 96
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-84.604| TNS=-1941.223| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 234ec9c54
+
+Time (s): cpu = 00:09:37 ; elapsed = 00:19:53 . Memory (MB): peak = 1336.180 ; gain = 201.277
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 69
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-85.461| TNS=-1953.943| WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 16339499d
+
+Time (s): cpu = 00:11:27 ; elapsed = 00:24:41 . Memory (MB): peak = 1336.758 ; gain = 201.855
+Phase 4 Rip-up And Reroute | Checksum: 16339499d
+
+Time (s): cpu = 00:11:27 ; elapsed = 00:24:41 . Memory (MB): peak = 1336.758 ; gain = 201.855
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 12a205b93
+
+Time (s): cpu = 00:11:28 ; elapsed = 00:24:41 . Memory (MB): peak = 1336.758 ; gain = 201.855
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-84.604| TNS=-1941.223| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 17fd45027
+
+Time (s): cpu = 00:11:28 ; elapsed = 00:24:41 . Memory (MB): peak = 1336.758 ; gain = 201.855
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 17fd45027
+
+Time (s): cpu = 00:11:28 ; elapsed = 00:24:41 . Memory (MB): peak = 1336.758 ; gain = 201.855
+Phase 5 Delay and Skew Optimization | Checksum: 17fd45027
+
+Time (s): cpu = 00:11:28 ; elapsed = 00:24:41 . Memory (MB): peak = 1336.758 ; gain = 201.855
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1efafdc67
+
+Time (s): cpu = 00:11:28 ; elapsed = 00:24:41 . Memory (MB): peak = 1336.758 ; gain = 201.855
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-84.604| TNS=-1920.155| WHS=-14.953| THS=-1104.259|
+
+
+Phase 6.1.2 Lut RouteThru Assignment for hold
+Phase 6.1.2 Lut RouteThru Assignment for hold | Checksum: 1de560cc0
+
+Time (s): cpu = 00:19:36 ; elapsed = 00:44:52 . Memory (MB): peak = 1961.914 ; gain = 827.012
+Phase 6.1 Hold Fix Iter | Checksum: 1de560cc0
+
+Time (s): cpu = 00:19:36 ; elapsed = 00:44:52 . Memory (MB): peak = 1961.914 ; gain = 827.012
+
+Phase 6.2 Additional Hold Fix
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-110.432| TNS=-3452.919| WHS=-14.953| THS=-1103.423|
+
+Phase 6.2 Additional Hold Fix | Checksum: 18cccbd3a
+
+Time (s): cpu = 00:35:20 ; elapsed = 01:11:18 . Memory (MB): peak = 1992.496 ; gain = 857.594
+ Number of Nodes with overlaps = 3944
+ Number of Nodes with overlaps = 4847
+ Number of Nodes with overlaps = 4161
+ Number of Nodes with overlaps = 3947
+ Number of Nodes with overlaps = 3324
+ Number of Nodes with overlaps = 3182
+ Number of Nodes with overlaps = 2908
+ Number of Nodes with overlaps = 2669
+ Number of Nodes with overlaps = 2500
+ Number of Nodes with overlaps = 2257
+WARNING: [Route 35-468] The router encountered 80 pins that are both setup-critical and hold-critical and tried to fix hold violations at the expense of setup slack. Such pins are:
+	System_i/FIR_Filter_V4_IP_0/U0/FIR_Filter_v1_0_S_AXI_inst/UUT/filter_output[28]_INST_0/I0
+	System_i/FIR_Filter_V4_IP_0/U0/FIR_Filter_v1_0_S_AXI_inst/UUT/filter_output[27]_INST_0/I0
+	System_i/FIR_Filter_V4_IP_0/U0/FIR_Filter_v1_0_S_AXI_inst/UUT/filter_output[26]_INST_0/I0
+	System_i/FIR_Filter_V4_IP_0/U0/FIR_Filter_v1_0_S_AXI_inst/UUT/filter_output[23]_INST_0/I0
+	System_i/FIR_Filter_V4_IP_0/U0/FIR_Filter_v1_0_S_AXI_inst/UUT/filter_output[18]_INST_0/I0
+	System_i/FIR_Filter_V4_IP_0/U0/FIR_Filter_v1_0_S_AXI_inst/UUT/filter_output[17]_INST_0/I0
+	System_i/FIR_Filter_V4_IP_0/U0/FIR_Filter_v1_0_S_AXI_inst/UUT/filter_output[16]_INST_0/I0
+	System_i/FIR_Filter_V4_IP_0/U0/FIR_Filter_v1_0_S_AXI_inst/UUT/filter_output[15]_INST_0/I0
+	System_i/FIR_Filter_V4_IP_0/U0/FIR_Filter_v1_0_S_AXI_inst/UUT/filter_output[14]_INST_0/I0
+	System_i/FIR_Filter_V4_IP_0/U0/FIR_Filter_v1_0_S_AXI_inst/UUT/filter_output[13]_INST_0/I0
+	.. and 70 more pins.
+
+Phase 6 Post Hold Fix | Checksum: 16b48c461
+
+Time (s): cpu = 01:03:08 ; elapsed = 02:01:30 . Memory (MB): peak = 1992.496 ; gain = 857.594
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 34.3502 %
+  Global Horizontal Routing Utilization  = 23.1514 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 8x8 Area, Max Cong = 92.6943%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X0Y4 -> INT_R_X7Y11
+   INT_L_X24Y4 -> INT_R_X31Y11
+   INT_L_X0Y0 -> INT_R_X7Y3
+   INT_L_X16Y0 -> INT_R_X23Y3
+   INT_L_X24Y0 -> INT_R_X31Y3
+South Dir 8x8 Area, Max Cong = 89.2736%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X24Y4 -> INT_R_X31Y11
+   INT_L_X0Y0 -> INT_R_X7Y3
+   INT_L_X24Y0 -> INT_R_X31Y3
+East Dir 8x8 Area, Max Cong = 90.4412%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X24Y4 -> INT_R_X31Y11
+   INT_L_X24Y0 -> INT_R_X31Y3
+West Dir 4x4 Area, Max Cong = 91.0846%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X0Y4 -> INT_R_X3Y7
+   INT_L_X0Y0 -> INT_R_X3Y3
+   INT_L_X4Y0 -> INT_R_X7Y3
+   INT_L_X24Y0 -> INT_R_X27Y3
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 2
+Effective congestion level: 4 Aspect Ratio: 0.75 Sparse Ratio: 0.5625
+Direction: South
+----------------
+Congested clusters found at Level 2
+Effective congestion level: 3 Aspect Ratio: 1 Sparse Ratio: 1.5
+Direction: East
+----------------
+Congested clusters found at Level 2
+Effective congestion level: 4 Aspect Ratio: 0.75 Sparse Ratio: 0.5625
+Direction: West
+----------------
+Congested clusters found at Level 2
+Effective congestion level: 3 Aspect Ratio: 1 Sparse Ratio: 1
+
+Phase 7 Route finalize | Checksum: 232306ec4
+
+Time (s): cpu = 01:03:08 ; elapsed = 02:01:31 . Memory (MB): peak = 1992.496 ; gain = 857.594
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 232306ec4
+
+Time (s): cpu = 01:03:08 ; elapsed = 02:01:31 . Memory (MB): peak = 1992.496 ; gain = 857.594
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 2cc4c839d
+
+Time (s): cpu = 01:03:08 ; elapsed = 02:01:31 . Memory (MB): peak = 1992.496 ; gain = 857.594
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: 22e2847a5
+
+Time (s): cpu = 01:03:08 ; elapsed = 02:01:31 . Memory (MB): peak = 1992.496 ; gain = 857.594
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-118.402| TNS=-3582.868| WHS=-14.953| THS=-1103.423|
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 22e2847a5
+
+Time (s): cpu = 01:03:08 ; elapsed = 02:01:31 . Memory (MB): peak = 1992.496 ; gain = 857.594
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 01:03:08 ; elapsed = 02:01:31 . Memory (MB): peak = 1992.496 ; gain = 857.594
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+26 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 01:03:09 ; elapsed = 02:01:33 . Memory (MB): peak = 1992.496 ; gain = 877.289
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.822 . Memory (MB): peak = 1992.496 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.runs/impl_1/System_wrapper_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file System_wrapper_drc_routed.rpt -pb System_wrapper_drc_routed.pb -rpx System_wrapper_drc_routed.rpx
+Command: report_drc -file System_wrapper_drc_routed.rpt -pb System_wrapper_drc_routed.pb -rpx System_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.runs/impl_1/System_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file System_wrapper_methodology_drc_routed.rpt -pb System_wrapper_methodology_drc_routed.pb -rpx System_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file System_wrapper_methodology_drc_routed.rpt -pb System_wrapper_methodology_drc_routed.pb -rpx System_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.runs/impl_1/System_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file System_wrapper_power_routed.rpt -pb System_wrapper_power_summary_routed.pb -rpx System_wrapper_power_routed.rpx
+Command: report_power -file System_wrapper_power_routed.rpt -pb System_wrapper_power_summary_routed.pb -rpx System_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+41 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file System_wrapper_route_status.rpt -pb System_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file System_wrapper_timing_summary_routed.rpt -pb System_wrapper_timing_summary_routed.pb -rpx System_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file System_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
+INFO: [runtcl-4] Executing : report_clock_utilization -file System_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file route_report_bus_skew_0.rpt -rpx route_report_bus_skew_0.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+
+*** Halting run - EA reset detected ***
+
+
+
+    while executing
+"start_step write_bitstream"
+    (file "System_wrapper.tcl" line 91)
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 10 01:53:05 2024...

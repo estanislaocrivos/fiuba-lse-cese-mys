@@ -30,7 +30,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:arty-z7-10:part0:1.1 [current_project]
-set_property ip_repo_paths {{c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_IP}} [current_project]
+set_property ip_repo_paths {
+  {c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_IP}
+  {c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V3_IP}
+} [current_project]
 set_property ip_output_repo c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PL_Plus_PS/FIR_Filter_PL_Plus_PS.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PL_Plus_PS/FIR_Filter_PL_Plus_PS.srcs/sources_1/bd/System/ip/System_processing_system7_0_0/System_processing_system7_0_0.xci

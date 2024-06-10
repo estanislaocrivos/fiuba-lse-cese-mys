@@ -1,0 +1,16 @@
+vhdl xil_defaultlib  \
+"../../../bd/System/ipshared/f551/sim/acum_fase.vhd" \
+"../../../bd/System/ipshared/f551/sim/nco.vhd" \
+"../../../bd/System/ipshared/f551/sim/sin_cos.vhd" \
+"../../../bd/System/ipshared/f551/sim/sin_rom.vhd" \
+"../../../bd/System/ipshared/f551/sim/Signal_Generator.vhd" \
+"../../../bd/System/ip/System_Signal_Generator_0_0/sim/System_Signal_Generator_0_0.vhd" \
+"../../../bd/System/ipshared/3571/hdl/FIR_Filter_V4_IP_v1_0_S_AXI.vhd" \
+"../../../bd/System/ipshared/3571/src/FIR_Filter.vhd" \
+"../../../bd/System/ipshared/3571/hdl/FIR_Filter_V4_IP_v1_0.vhd" \
+"../../../bd/System/ip/System_FIR_Filter_V4_IP_0_0/sim/System_FIR_Filter_V4_IP_0_0.vhd" \
+"../../../bd/System/ip/System_ila_0_0/sim/System_ila_0_0.vhd" \
+"../../../bd/System/ip/System_rst_ps7_0_1M_0/sim/System_rst_ps7_0_1M_0.vhd" \
+"../../../bd/System/sim/System.vhd" \
+
+nosort

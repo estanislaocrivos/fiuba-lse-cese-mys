@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-// Date        : Sun Jun  9 01:53:47 2024
+// Date        : Sun Jun  9 01:53:46 2024
 // Host        : LAPTOP-66OF9HIK running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PL_Plus_PS/FIR_Filter_PL_Plus_PS.srcs/sources_1/bd/System/ip/System_FIR_Filter_0_0/System_FIR_Filter_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top System_FIR_Filter_0_0 -prefix
+//               System_FIR_Filter_0_0_ System_FIR_Filter_0_0_sim_netlist.v
 // Design      : System_FIR_Filter_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,116 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "System_FIR_Filter_0_0,FIR_Filter_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "FIR_Filter_v1_0,Vivado 2018.1" *) 
-(* NotValidForBitStream *)
-module System_FIR_Filter_0_0
-   (filter_output,
-    s_axi_awaddr,
-    s_axi_awprot,
-    s_axi_awvalid,
-    s_axi_awready,
-    s_axi_wdata,
-    s_axi_wstrb,
-    s_axi_wvalid,
-    s_axi_wready,
-    s_axi_bresp,
-    s_axi_bvalid,
-    s_axi_bready,
-    s_axi_araddr,
-    s_axi_arprot,
-    s_axi_arvalid,
-    s_axi_arready,
-    s_axi_rdata,
-    s_axi_rresp,
-    s_axi_rvalid,
-    s_axi_rready,
-    s_axi_aclk,
-    s_axi_aresetn);
-  output [31:0]filter_output;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 9, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 6, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN System_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [5:0]s_axi_awaddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWPROT" *) input [2:0]s_axi_awprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output s_axi_awready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [31:0]s_axi_wdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WSTRB" *) input [3:0]s_axi_wstrb;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WVALID" *) input s_axi_wvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WREADY" *) output s_axi_wready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BRESP" *) output [1:0]s_axi_bresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BVALID" *) output s_axi_bvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BREADY" *) input s_axi_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *) input [5:0]s_axi_araddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARPROT" *) input [2:0]s_axi_arprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARVALID" *) input s_axi_arvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARREADY" *) output s_axi_arready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RDATA" *) output [31:0]s_axi_rdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *) output [1:0]s_axi_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output s_axi_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) input s_axi_rready;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 S_AXI_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_CLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN System_processing_system7_0_0_FCLK_CLK0" *) input s_axi_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 S_AXI_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_RST, POLARITY ACTIVE_LOW" *) input s_axi_aresetn;
-
-  wire \<const0> ;
-  wire [0:0]\FIR_Filter_v1_0_S_AXI_inst/slv_reg7 ;
-  wire [28:0]\^filter_output ;
-  wire \filter_output[28]_INST_0_i_1_n_0 ;
-  wire s_axi_aclk;
-  wire [5:0]s_axi_araddr;
-  wire s_axi_aresetn;
-  wire s_axi_arready;
-  wire s_axi_arvalid;
-  wire [5:0]s_axi_awaddr;
-  wire s_axi_awready;
-  wire s_axi_awvalid;
-  wire s_axi_bready;
-  wire s_axi_bvalid;
-  wire [31:0]s_axi_rdata;
-  wire s_axi_rready;
-  wire s_axi_rvalid;
-  wire [31:0]s_axi_wdata;
-  wire s_axi_wready;
-  wire [3:0]s_axi_wstrb;
-  wire s_axi_wvalid;
-
-  assign filter_output[31] = \<const0> ;
-  assign filter_output[30] = \<const0> ;
-  assign filter_output[29] = \<const0> ;
-  assign filter_output[28:0] = \^filter_output [28:0];
-  assign s_axi_bresp[1] = \<const0> ;
-  assign s_axi_bresp[0] = \<const0> ;
-  assign s_axi_rresp[1] = \<const0> ;
-  assign s_axi_rresp[0] = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  System_FIR_Filter_0_0_FIR_Filter_v1_0 U0
-       (.Q(\FIR_Filter_v1_0_S_AXI_inst/slv_reg7 ),
-        .S_AXI_ARREADY(s_axi_arready),
-        .S_AXI_AWREADY(s_axi_awready),
-        .S_AXI_WREADY(s_axi_wready),
-        .filter_output(\^filter_output ),
-        .\filter_output[28]_INST_0_i_1 (\filter_output[28]_INST_0_i_1_n_0 ),
-        .s_axi_aclk(s_axi_aclk),
-        .s_axi_araddr(s_axi_araddr[5:2]),
-        .s_axi_aresetn(s_axi_aresetn),
-        .s_axi_arvalid(s_axi_arvalid),
-        .s_axi_awaddr(s_axi_awaddr[5:2]),
-        .s_axi_awvalid(s_axi_awvalid),
-        .s_axi_bready(s_axi_bready),
-        .s_axi_bvalid(s_axi_bvalid),
-        .s_axi_rdata(s_axi_rdata),
-        .s_axi_rready(s_axi_rready),
-        .s_axi_rvalid(s_axi_rvalid),
-        .s_axi_wdata(s_axi_wdata),
-        .s_axi_wstrb(s_axi_wstrb),
-        .s_axi_wvalid(s_axi_wvalid));
-  FDCE \filter_output[28]_INST_0_i_1 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .CLR(\FIR_Filter_v1_0_S_AXI_inst/slv_reg7 ),
-        .D(1'b1),
-        .Q(\filter_output[28]_INST_0_i_1_n_0 ));
-endmodule
-
-(* ORIG_REF_NAME = "Acum_Fase" *) 
 module System_FIR_Filter_0_0_Acum_Fase
    (Q,
     D,
@@ -1813,7 +1703,6 @@ module System_FIR_Filter_0_0_Acum_Fase_8
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "FIR_Filter" *) 
 module System_FIR_Filter_0_0_FIR_Filter
    (P,
     filter_output,
@@ -4820,7 +4709,6 @@ module System_FIR_Filter_0_0_FIR_Filter
         .O(filter_output[9]));
 endmodule
 
-(* ORIG_REF_NAME = "FIR_Filter_Plus_NCO" *) 
 module System_FIR_Filter_0_0_FIR_Filter_Plus_NCO
    (filter_output,
     P,
@@ -5175,7 +5063,6 @@ module System_FIR_Filter_0_0_FIR_Filter_Plus_NCO
         .S({1'b0,1'b0,OSC3_n_10,OSC2_n_13}));
 endmodule
 
-(* ORIG_REF_NAME = "FIR_Filter_v1_0" *) 
 module System_FIR_Filter_0_0_FIR_Filter_v1_0
    (filter_output,
     Q,
@@ -5262,7 +5149,6 @@ module System_FIR_Filter_0_0_FIR_Filter_v1_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "FIR_Filter_v1_0_S_AXI" *) 
 module System_FIR_Filter_0_0_FIR_Filter_v1_0_S_AXI
    (filter_output,
     Q,
@@ -8915,7 +8801,6 @@ module System_FIR_Filter_0_0_FIR_Filter_v1_0_S_AXI
         .R(axi_awready_i_1_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "Sin_Cos" *) 
 module System_FIR_Filter_0_0_Sin_Cos
    (\delay_line_reg[12][7] ,
     \delay_line_reg[12][7]_0 ,
@@ -9569,7 +9454,6 @@ module System_FIR_Filter_0_0_Sin_Cos_9
         .s_axi_aclk(s_axi_aclk));
 endmodule
 
-(* ORIG_REF_NAME = "Sin_Rom" *) 
 module System_FIR_Filter_0_0_Sin_Rom
    (\delay_line_reg[12][7] ,
     \delay_line_reg[12][7]_0 ,
@@ -12868,7 +12752,115 @@ module System_FIR_Filter_0_0_Sin_Rom_7
         .O(g1_b7__3_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "nco" *) 
+(* CHECK_LICENSE_TYPE = "System_FIR_Filter_0_0,FIR_Filter_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "FIR_Filter_v1_0,Vivado 2018.1" *) 
+(* NotValidForBitStream *)
+module System_FIR_Filter_0_0
+   (filter_output,
+    s_axi_awaddr,
+    s_axi_awprot,
+    s_axi_awvalid,
+    s_axi_awready,
+    s_axi_wdata,
+    s_axi_wstrb,
+    s_axi_wvalid,
+    s_axi_wready,
+    s_axi_bresp,
+    s_axi_bvalid,
+    s_axi_bready,
+    s_axi_araddr,
+    s_axi_arprot,
+    s_axi_arvalid,
+    s_axi_arready,
+    s_axi_rdata,
+    s_axi_rresp,
+    s_axi_rvalid,
+    s_axi_rready,
+    s_axi_aclk,
+    s_axi_aresetn);
+  output [31:0]filter_output;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 9, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 6, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN System_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [5:0]s_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWPROT" *) input [2:0]s_axi_awprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output s_axi_awready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [31:0]s_axi_wdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WSTRB" *) input [3:0]s_axi_wstrb;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WVALID" *) input s_axi_wvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WREADY" *) output s_axi_wready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BRESP" *) output [1:0]s_axi_bresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BVALID" *) output s_axi_bvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BREADY" *) input s_axi_bready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *) input [5:0]s_axi_araddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARPROT" *) input [2:0]s_axi_arprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARVALID" *) input s_axi_arvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARREADY" *) output s_axi_arready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RDATA" *) output [31:0]s_axi_rdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *) output [1:0]s_axi_rresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output s_axi_rvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) input s_axi_rready;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 S_AXI_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_CLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN System_processing_system7_0_0_FCLK_CLK0" *) input s_axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 S_AXI_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_RST, POLARITY ACTIVE_LOW" *) input s_axi_aresetn;
+
+  wire \<const0> ;
+  wire [0:0]\FIR_Filter_v1_0_S_AXI_inst/slv_reg7 ;
+  wire [28:0]\^filter_output ;
+  wire \filter_output[28]_INST_0_i_1_n_0 ;
+  wire s_axi_aclk;
+  wire [5:0]s_axi_araddr;
+  wire s_axi_aresetn;
+  wire s_axi_arready;
+  wire s_axi_arvalid;
+  wire [5:0]s_axi_awaddr;
+  wire s_axi_awready;
+  wire s_axi_awvalid;
+  wire s_axi_bready;
+  wire s_axi_bvalid;
+  wire [31:0]s_axi_rdata;
+  wire s_axi_rready;
+  wire s_axi_rvalid;
+  wire [31:0]s_axi_wdata;
+  wire s_axi_wready;
+  wire [3:0]s_axi_wstrb;
+  wire s_axi_wvalid;
+
+  assign filter_output[31] = \<const0> ;
+  assign filter_output[30] = \<const0> ;
+  assign filter_output[29] = \<const0> ;
+  assign filter_output[28:0] = \^filter_output [28:0];
+  assign s_axi_bresp[1] = \<const0> ;
+  assign s_axi_bresp[0] = \<const0> ;
+  assign s_axi_rresp[1] = \<const0> ;
+  assign s_axi_rresp[0] = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  System_FIR_Filter_0_0_FIR_Filter_v1_0 U0
+       (.Q(\FIR_Filter_v1_0_S_AXI_inst/slv_reg7 ),
+        .S_AXI_ARREADY(s_axi_arready),
+        .S_AXI_AWREADY(s_axi_awready),
+        .S_AXI_WREADY(s_axi_wready),
+        .filter_output(\^filter_output ),
+        .\filter_output[28]_INST_0_i_1 (\filter_output[28]_INST_0_i_1_n_0 ),
+        .s_axi_aclk(s_axi_aclk),
+        .s_axi_araddr(s_axi_araddr[5:2]),
+        .s_axi_aresetn(s_axi_aresetn),
+        .s_axi_arvalid(s_axi_arvalid),
+        .s_axi_awaddr(s_axi_awaddr[5:2]),
+        .s_axi_awvalid(s_axi_awvalid),
+        .s_axi_bready(s_axi_bready),
+        .s_axi_bvalid(s_axi_bvalid),
+        .s_axi_rdata(s_axi_rdata),
+        .s_axi_rready(s_axi_rready),
+        .s_axi_rvalid(s_axi_rvalid),
+        .s_axi_wdata(s_axi_wdata),
+        .s_axi_wstrb(s_axi_wstrb),
+        .s_axi_wvalid(s_axi_wvalid));
+  FDCE \filter_output[28]_INST_0_i_1 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .CLR(\FIR_Filter_v1_0_S_AXI_inst/slv_reg7 ),
+        .D(1'b1),
+        .Q(\filter_output[28]_INST_0_i_1_n_0 ));
+endmodule
+
 module System_FIR_Filter_0_0_nco
    (filter_input40_in,
     \delay_line_reg[12][9] ,

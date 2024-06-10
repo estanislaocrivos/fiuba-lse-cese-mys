@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1717910079">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1717980946">
   <File Type="PA-TCL" Name="System_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="System_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="System_wrapper_reports.tcl"/>
@@ -42,8 +42,7 @@
     </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="System_vio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="System_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="System_FIR_Filter_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="System_rst_Microcontroller_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="System_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="System_clk_wiz_0_0"/>
 </GenRun>

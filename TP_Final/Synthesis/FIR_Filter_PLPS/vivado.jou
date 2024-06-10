@@ -1,0 +1,86 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon Jun 10 00:04:36 2024
+# Process ID: 23380
+# Current directory: C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11600 C:\Users\Lenovo\Desktop\CESE\CESE_MYS\TP_Final\Synthesis\FIR_Filter_PLPS\FIR_Filter_PLPS.xpr
+# Log file: C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/vivado.log
+# Journal file: C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/System.bd}
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets rst_ps7_0_1M_peripheral_aresetn]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_1M/peripheral_aresetn]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins rst_ps7_0_1M/peripheral_aresetn]
+connect_bd_net [get_bd_pins rst_ps7_0_1M/peripheral_reset] [get_bd_pins Signal_Generator_0/reset]
+connect_bd_net [get_bd_pins FIR_Filter_V4_IP_0/s_axi_aresetn] [get_bd_pins rst_ps7_0_1M/peripheral_reset]
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+delete_bd_objs [get_bd_nets rst_ps7_0_1M_peripheral_reset]
+connect_bd_net [get_bd_pins FIR_Filter_V4_IP_0/s_axi_aresetn] [get_bd_pins rst_ps7_0_1M/peripheral_aresetn]
+validate_bd_design
+connect_bd_net [get_bd_pins rst_ps7_0_1M/peripheral_reset] [get_bd_pins Signal_Generator_0/reset]
+validate_bd_design
+save_bd_design
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+close_project
+create_project managed_ip_project {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V5_IP/managed_ip_project} -part xc7z010clg400-1 -ip
+set_property board_part digilentinc.com:arty-z7-10:part0:1.1 [current_project]
+set_property target_language VHDL [current_project]
+set_property target_simulator XSim [current_project]
+create_peripheral xilinx.com user FIR_Filter_V5_IP 1.0 -dir {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V5_IP/managed_ip_project/../ip_repo}
+add_peripheral_interface S_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:FIR_Filter_V5_IP:1.0]
+set_property VALUE 8 [ipx::get_bus_parameters WIZ_NUM_REG -of_objects [ipx::get_bus_interfaces S_AXI -of_objects [ipx::find_open_core xilinx.com:user:FIR_Filter_V5_IP:1.0]]]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:FIR_Filter_V5_IP:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:FIR_Filter_V5_IP:1.0]
+set_property  ip_repo_paths  {{C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V5_IP/managed_ip_project/../ip_repo/FIR_Filter_V5_IP_1.0}} [current_project]
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name edit_FIR_Filter_V5_IP_v1_0 -directory {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios\ IP/FIR_Filter_V5_IP/managed_ip_project/../ip_repo} {c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V5_IP/ip_repo/FIR_Filter_V5_IP_1.0/component.xml}
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to {c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V5_IP/ip_repo/FIR_Filter_V5_IP_1.0/src} {{C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V4/NCO_Signal Generator/nco.vhd} {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V4/NCO_Signal Generator/sin_cos.vhd} {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V4/NCO_Signal Generator/sin_rom.vhd} {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V4/NCO_Signal Generator/Signal_Generator.vhd} {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V4/NCO_Signal Generator/acum_fase.vhd} {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V4/FIR_Filter.vhd} {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V4/FIR_Filter_Plus_SG.vhd}}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V5_IP/ip_repo/FIR_Filter_V5_IP_1.0/src/FIR_Filter_Plus_SG.vhd}}] -no_script -reset -force -quiet
+remove_files  {{c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V5_IP/ip_repo/FIR_Filter_V5_IP_1.0/src/FIR_Filter_Plus_SG.vhd}}
+remove_files  {{c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V5_IP/ip_repo/FIR_Filter_V5_IP_1.0/src/FIR_Filter_Plus_SG.vhd}}
+close_project
+create_peripheral xilinx.com user FIR_Filter_V5_IP 1.0 -dir {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V5_IP}
+add_peripheral_interface S_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:FIR_Filter_V5_IP:1.0]
+set_property VALUE 8 [ipx::get_bus_parameters WIZ_NUM_REG -of_objects [ipx::get_bus_interfaces S_AXI -of_objects [ipx::find_open_core xilinx.com:user:FIR_Filter_V5_IP:1.0]]]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:FIR_Filter_V5_IP:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:FIR_Filter_V5_IP:1.0]
+set_property  ip_repo_paths  {{C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V5_IP/FIR_Filter_V5_IP_1.0} {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V5_IP/ip_repo/FIR_Filter_V5_IP_1.0}} [current_project]
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name edit_FIR_Filter_V5_IP_v1_0 -directory {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios\ IP/FIR_Filter_V5_IP} {c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V5_IP/FIR_Filter_V5_IP_1.0/component.xml}
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to {c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V5_IP/FIR_Filter_V5_IP_1.0/src} {{C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V4/NCO_Signal Generator/nco.vhd} {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V4/NCO_Signal Generator/sin_cos.vhd} {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V4/NCO_Signal Generator/sin_rom.vhd} {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V4/NCO_Signal Generator/Signal_Generator.vhd} {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V4/NCO_Signal Generator/acum_fase.vhd} {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V4/FIR_Filter.vhd} {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V4/FIR_Filter_Plus_SG.vhd}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path {c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V5_IP/FIR_Filter_V5_IP_1.0}
+close_project

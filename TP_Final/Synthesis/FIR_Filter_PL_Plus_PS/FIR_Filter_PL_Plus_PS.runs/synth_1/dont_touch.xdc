@@ -10,14 +10,17 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_processi
 # IP: bd/System/ip/System_FIR_Filter_0_0/System_FIR_Filter_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_FIR_Filter_0_0 || ORIG_REF_NAME==System_FIR_Filter_0_0} -quiet] -quiet
 
-# IP: bd/System/ip/System_Microcontroller_0_axi_periph_0/System_Microcontroller_0_axi_periph_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_Microcontroller_0_axi_periph_0 || ORIG_REF_NAME==System_Microcontroller_0_axi_periph_0} -quiet] -quiet
+# IP: bd/System/ip/System_ila_0_0/System_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_ila_0_0 || ORIG_REF_NAME==System_ila_0_0} -quiet] -quiet
 
-# IP: bd/System/ip/System_rst_Microcontroller_0_100M_0/System_rst_Microcontroller_0_100M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_rst_Microcontroller_0_100M_0 || ORIG_REF_NAME==System_rst_Microcontroller_0_100M_0} -quiet] -quiet
+# IP: bd/System/ip/System_ps7_0_axi_periph_0/System_ps7_0_axi_periph_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_ps7_0_axi_periph_0 || ORIG_REF_NAME==System_ps7_0_axi_periph_0} -quiet] -quiet
 
-# IP: bd/System/ip/System_vio_0_0/System_vio_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_vio_0_0 || ORIG_REF_NAME==System_vio_0_0} -quiet] -quiet
+# IP: bd/System/ip/System_rst_ps7_0_100M_0/System_rst_ps7_0_100M_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_rst_ps7_0_100M_0 || ORIG_REF_NAME==System_rst_ps7_0_100M_0} -quiet] -quiet
+
+# IP: bd/System/ip/System_clk_wiz_0_0/System_clk_wiz_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_clk_wiz_0_0 || ORIG_REF_NAME==System_clk_wiz_0_0} -quiet] -quiet
 
 # IP: bd/System/ip/System_auto_pc_0/System_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_auto_pc_0 || ORIG_REF_NAME==System_auto_pc_0} -quiet] -quiet

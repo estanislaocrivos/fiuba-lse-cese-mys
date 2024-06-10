@@ -71,7 +71,10 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PL_Plus_PS/FIR_Filter_PL_Plus_PS.cache/wt [current_project]
   set_property parent.project_path C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PL_Plus_PS/FIR_Filter_PL_Plus_PS.xpr [current_project]
-  set_property ip_repo_paths {{C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_IP}} [current_project]
+  set_property ip_repo_paths {
+  {c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_IP}
+  {C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/Repositorios IP/FIR_Filter_V3_IP}
+} [current_project]
   set_property ip_output_repo C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PL_Plus_PS/FIR_Filter_PL_Plus_PS.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]

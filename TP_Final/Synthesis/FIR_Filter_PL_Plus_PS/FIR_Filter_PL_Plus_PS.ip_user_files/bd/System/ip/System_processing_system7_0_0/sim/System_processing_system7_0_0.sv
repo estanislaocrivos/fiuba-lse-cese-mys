@@ -677,6 +677,9 @@
 
 //MODULE DECLARATION
  module System_processing_system7_0_0 (
+  USB0_PORT_INDCTL,
+  USB0_VBUS_PWRSELECT,
+  USB0_VBUS_PWRFAULT,
   M_AXI_GP0_ARVALID,
   M_AXI_GP0_AWVALID,
   M_AXI_GP0_BREADY,
@@ -792,7 +795,7 @@
       parameter C_USE_S_AXI_HP3 = 0;
       parameter C_USE_S_AXI_ACP = 0;
       parameter C_PS7_SI_REV = "PRODUCTION";
-      parameter C_FCLK_CLK0_BUF = "FALSE";
+      parameter C_FCLK_CLK0_BUF = "TRUE";
       parameter C_FCLK_CLK1_BUF = "FALSE";
       parameter C_FCLK_CLK2_BUF = "FALSE";
       parameter C_FCLK_CLK3_BUF = "FALSE";
@@ -802,6 +805,9 @@
 
 //INPUT AND OUTPUT PORTS
 
+      output  [1 : 0] USB0_PORT_INDCTL;
+      output  USB0_VBUS_PWRSELECT;
+      input  USB0_VBUS_PWRFAULT;
       output  M_AXI_GP0_ARVALID;
       output  M_AXI_GP0_AWVALID;
       output  M_AXI_GP0_BREADY;
@@ -867,6 +873,8 @@
 
 //REG DECLARATIONS
 
+      reg [1 : 0] USB0_PORT_INDCTL;
+      reg USB0_VBUS_PWRSELECT;
       reg M_AXI_GP0_ARVALID;
       reg M_AXI_GP0_AWVALID;
       reg M_AXI_GP0_BREADY;

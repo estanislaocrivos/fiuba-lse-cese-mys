@@ -1,0 +1,469 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sun Jun  9 23:23:20 2024
+# Process ID: 29544
+# Current directory: C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.runs/System_FIR_Filter_V4_IP_0_0_synth_1
+# Command line: vivado.exe -log System_FIR_Filter_V4_IP_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source System_FIR_Filter_V4_IP_0_0.tcl
+# Log file: C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.runs/System_FIR_Filter_V4_IP_0_0_synth_1/System_FIR_Filter_V4_IP_0_0.vds
+# Journal file: C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.runs/System_FIR_Filter_V4_IP_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source System_FIR_Filter_V4_IP_0_0.tcl -notrace
+Command: synth_design -top System_FIR_Filter_V4_IP_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 33140 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 374.629 ; gain = 100.191
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'System_FIR_Filter_V4_IP_0_0' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ip/System_FIR_Filter_V4_IP_0_0/synth/System_FIR_Filter_V4_IP_0_0.vhd:84]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'FIR_Filter_v1_0' declared at 'c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/hdl/FIR_Filter_V4_IP_v1_0.vhd:5' bound to instance 'U0' of component 'FIR_Filter_v1_0' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ip/System_FIR_Filter_V4_IP_0_0/synth/System_FIR_Filter_V4_IP_0_0.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'FIR_Filter_v1_0' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/hdl/FIR_Filter_V4_IP_v1_0.vhd:51]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'FIR_Filter_v1_0_S_AXI' declared at 'c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/hdl/FIR_Filter_V4_IP_v1_0_S_AXI.vhd:5' bound to instance 'FIR_Filter_v1_0_S_AXI_inst' of component 'FIR_Filter_v1_0_S_AXI' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/hdl/FIR_Filter_V4_IP_v1_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'FIR_Filter_v1_0_S_AXI' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/hdl/FIR_Filter_V4_IP_v1_0_S_AXI.vhd:88]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'FIR_Filter' declared at 'c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:10' bound to instance 'UUT' of component 'FIR_Filter' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/hdl/FIR_Filter_V4_IP_v1_0_S_AXI.vhd:472]
+INFO: [Synth 8-638] synthesizing module 'FIR_Filter' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:27]
+WARNING: [Synth 8-6014] Unused sequential element temp_accumulator_reg was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:91]
+INFO: [Synth 8-4471] merging register 'coefficients_reg[7][15:0]' into 'coefficients_reg[5][15:0]' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+INFO: [Synth 8-4471] merging register 'coefficients_reg[8][15:0]' into 'coefficients_reg[4][15:0]' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+INFO: [Synth 8-4471] merging register 'coefficients_reg[9][15:0]' into 'coefficients_reg[3][15:0]' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+INFO: [Synth 8-4471] merging register 'coefficients_reg[10][15:0]' into 'coefficients_reg[2][15:0]' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+INFO: [Synth 8-4471] merging register 'coefficients_reg[11][15:0]' into 'coefficients_reg[1][15:0]' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+INFO: [Synth 8-4471] merging register 'coefficients_reg[12][15:0]' into 'coefficients_reg[0][15:0]' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element coefficients_reg[7] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element coefficients_reg[8] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element coefficients_reg[9] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element coefficients_reg[10] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element coefficients_reg[11] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element coefficients_reg[12] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'FIR_Filter' (1#1) [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:27]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/hdl/FIR_Filter_V4_IP_v1_0_S_AXI.vhd:249]
+INFO: [Synth 8-256] done synthesizing module 'FIR_Filter_v1_0_S_AXI' (2#1) [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/hdl/FIR_Filter_V4_IP_v1_0_S_AXI.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'FIR_Filter_v1_0' (3#1) [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/hdl/FIR_Filter_V4_IP_v1_0.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'System_FIR_Filter_V4_IP_0_0' (4#1) [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ip/System_FIR_Filter_V4_IP_0_0/synth/System_FIR_Filter_V4_IP_0_0.vhd:84]
+WARNING: [Synth 8-3331] design FIR_Filter_v1_0_S_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design FIR_Filter_v1_0_S_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design FIR_Filter_v1_0_S_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design FIR_Filter_v1_0_S_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design FIR_Filter_v1_0_S_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design FIR_Filter_v1_0_S_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 430.453 ; gain = 156.016
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 430.453 ; gain = 156.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 430.453 ; gain = 156.016
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 750.941 ; gain = 0.180
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:36 . Memory (MB): peak = 750.941 ; gain = 476.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:36 . Memory (MB): peak = 750.941 ; gain = 476.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:36 . Memory (MB): peak = 750.941 ; gain = 476.504
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element coefficients_reg[0] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element coefficients_reg[1] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element coefficients_reg[2] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element coefficients_reg[3] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element coefficients_reg[4] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element coefficients_reg[5] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element coefficients_reg[6] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:36 . Memory (MB): peak = 750.941 ; gain = 476.504
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 10    
+	               29 Bit    Registers := 1     
+	               16 Bit    Registers := 13    
+	               10 Bit    Registers := 13    
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	  10 Input     32 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module FIR_Filter 
+Detailed RTL Component Info : 
++---Registers : 
+	               29 Bit    Registers := 1     
+	               16 Bit    Registers := 13    
+	               10 Bit    Registers := 13    
+Module FIR_Filter_v1_0_S_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 10    
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	  10 Input     32 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[0][15:0]' into 'U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[0][15:0]' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+INFO: [Synth 8-4471] merging register 'U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[5][15:0]' into 'U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[5][15:0]' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+INFO: [Synth 8-4471] merging register 'U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[4][15:0]' into 'U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[4][15:0]' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+INFO: [Synth 8-4471] merging register 'U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[3][15:0]' into 'U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[3][15:0]' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+INFO: [Synth 8-4471] merging register 'U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[2][15:0]' into 'U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[2][15:0]' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+INFO: [Synth 8-4471] merging register 'U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[1][15:0]' into 'U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[1][15:0]' [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[0] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[5] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[4] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[3] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[2] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[1] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[0] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[1] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[2] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[3] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[4] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[5] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[6] was removed.  [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:50]
+DSP Report: Generating DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator1, operation Mode is: A2*B.
+DSP Report: register U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[0] is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator1.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator1 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator1.
+DSP Report: Generating DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0, operation Mode is: PCIN+A2*B.
+DSP Report: register U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[0] is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator12 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: Generating DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0, operation Mode is: PCIN+A2*B.
+DSP Report: register U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[1] is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator2 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: Generating DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0, operation Mode is: PCIN+A2*B.
+DSP Report: register U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[2] is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator3 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: Generating DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0, operation Mode is: PCIN+A2*B.
+DSP Report: register U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[3] is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator4 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: Generating DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0, operation Mode is: PCIN+A2*B.
+DSP Report: register U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[4] is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator5 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: Generating DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0, operation Mode is: PCIN+A2*B.
+DSP Report: register U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[5] is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator6 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: Generating DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0, operation Mode is: PCIN+A2*B.
+DSP Report: register U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[6] is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator7 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: Generating DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0, operation Mode is: PCIN+A2*B.
+DSP Report: register U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[5] is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator8 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: Generating DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0, operation Mode is: PCIN+A2*B.
+DSP Report: register U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[4] is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator9 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: Generating DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0, operation Mode is: PCIN+A2*B.
+DSP Report: register U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[3] is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator10 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: Generating DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0, operation Mode is: PCIN+A2*B.
+DSP Report: register U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[2] is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator11 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: Generating DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0, operation Mode is: PCIN+A2*B.
+DSP Report: register U0/FIR_Filter_v1_0_S_AXI_inst/UUT/coefficients_reg[1] is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+DSP Report: operator U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator12 is absorbed into DSP U0/FIR_Filter_v1_0_S_AXI_inst/UUT/accumulator0.
+INFO: [Synth 8-3917] design System_FIR_Filter_V4_IP_0_0 has port filter_output[31] driven by constant 0
+INFO: [Synth 8-3917] design System_FIR_Filter_V4_IP_0_0 has port filter_output[30] driven by constant 0
+INFO: [Synth 8-3917] design System_FIR_Filter_V4_IP_0_0 has port filter_output[29] driven by constant 0
+WARNING: [Synth 8-3331] design System_FIR_Filter_V4_IP_0_0 has unconnected port s_axi_awprot[2]
+WARNING: [Synth 8-3331] design System_FIR_Filter_V4_IP_0_0 has unconnected port s_axi_awprot[1]
+WARNING: [Synth 8-3331] design System_FIR_Filter_V4_IP_0_0 has unconnected port s_axi_awprot[0]
+WARNING: [Synth 8-3331] design System_FIR_Filter_V4_IP_0_0 has unconnected port s_axi_arprot[2]
+WARNING: [Synth 8-3331] design System_FIR_Filter_V4_IP_0_0 has unconnected port s_axi_arprot[1]
+WARNING: [Synth 8-3331] design System_FIR_Filter_V4_IP_0_0 has unconnected port s_axi_arprot[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/FIR_Filter_v1_0_S_AXI_inst/aw_en_reg )
+INFO: [Synth 8-3886] merging instance 'U0/FIR_Filter_v1_0_S_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/FIR_Filter_v1_0_S_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/FIR_Filter_v1_0_S_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/FIR_Filter_v1_0_S_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/FIR_Filter_v1_0_S_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/FIR_Filter_v1_0_S_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (U0/FIR_Filter_v1_0_S_AXI_inst/aw_en_reg) is unused and will be removed from module System_FIR_Filter_V4_IP_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/FIR_Filter_v1_0_S_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module System_FIR_Filter_V4_IP_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/FIR_Filter_v1_0_S_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module System_FIR_Filter_V4_IP_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/FIR_Filter_v1_0_S_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module System_FIR_Filter_V4_IP_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/FIR_Filter_v1_0_S_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module System_FIR_Filter_V4_IP_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/FIR_Filter_v1_0_S_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module System_FIR_Filter_V4_IP_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/FIR_Filter_v1_0_S_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module System_FIR_Filter_V4_IP_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:39 . Memory (MB): peak = 750.941 ; gain = 476.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|FIR_Filter  | A2*B        | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter  | PCIN+A2*B   | 16     | 10     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter  | PCIN+A2*B   | 16     | 10     | -      | -      | 28     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter  | PCIN+A2*B   | 16     | 10     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter  | PCIN+A2*B   | 16     | 10     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter  | PCIN+A2*B   | 16     | 10     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter  | PCIN+A2*B   | 16     | 10     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter  | PCIN+A2*B   | 16     | 10     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter  | PCIN+A2*B   | 16     | 10     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter  | PCIN+A2*B   | 16     | 10     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter  | PCIN+A2*B   | 16     | 10     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter  | PCIN+A2*B   | 16     | 10     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Filter  | PCIN+A2*B   | 16     | 10     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:01:00 . Memory (MB): peak = 799.469 ; gain = 525.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:01:00 . Memory (MB): peak = 800.062 ; gain = 525.625
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:77]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:78]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:78]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:78]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:78]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:78]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:78]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:78]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:78]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:78]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:78]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:78]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:78]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ipshared/3571/src/FIR_Filter.vhd:78]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:01:00 . Memory (MB): peak = 812.102 ; gain = 537.664
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:01:01 . Memory (MB): peak = 812.102 ; gain = 537.664
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:01:01 . Memory (MB): peak = 812.102 ; gain = 537.664
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:01:01 . Memory (MB): peak = 812.102 ; gain = 537.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:01:02 . Memory (MB): peak = 812.102 ; gain = 537.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:01:02 . Memory (MB): peak = 812.102 ; gain = 537.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:01:02 . Memory (MB): peak = 812.102 ; gain = 537.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |DSP48E1 |    13|
+|2     |LUT1    |     1|
+|3     |LUT2    |    30|
+|4     |LUT3    |     4|
+|5     |LUT4    |     2|
+|6     |LUT6    |   133|
+|7     |FDCE    |   131|
+|8     |FDRE    |   329|
+|9     |FDSE    |     4|
++------+--------+------+
+
+Report Instance Areas: 
++------+-------------------------------+----------------------+------+
+|      |Instance                       |Module                |Cells |
++------+-------------------------------+----------------------+------+
+|1     |top                            |                      |   647|
+|2     |  U0                           |FIR_Filter_v1_0       |   646|
+|3     |    FIR_Filter_v1_0_S_AXI_inst |FIR_Filter_v1_0_S_AXI |   646|
+|4     |      UUT                      |FIR_Filter            |   172|
++------+-------------------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:01:02 . Memory (MB): peak = 812.102 ; gain = 537.664
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 26 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:49 . Memory (MB): peak = 812.102 ; gain = 217.176
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:01:02 . Memory (MB): peak = 812.102 ; gain = 537.664
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+63 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:01:05 . Memory (MB): peak = 812.102 ; gain = 549.176
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.runs/System_FIR_Filter_V4_IP_0_0_synth_1/System_FIR_Filter_V4_IP_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.srcs/sources_1/bd/System/ip/System_FIR_Filter_V4_IP_0_0/System_FIR_Filter_V4_IP_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Synthesis/FIR_Filter_PLPS/FIR_Filter_PLPS.runs/System_FIR_Filter_V4_IP_0_0_synth_1/System_FIR_Filter_V4_IP_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file System_FIR_Filter_V4_IP_0_0_utilization_synth.rpt -pb System_FIR_Filter_V4_IP_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 812.102 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Jun  9 23:24:34 2024...
