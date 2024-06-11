@@ -33,17 +33,22 @@ architecture FIR_Filter_Plus_SG_TB_Architecture of FIR_Filter_Plus_SG_TB is
     signal clk_TB : std_logic := '0';
     signal reset_TB : std_logic := '1';
 	signal coefficient_00_TB : unsigned(15 downto 0) := (others => '0');
-	signal coefficient_01_TB : unsigned(15 downto 0) := to_unsigned(51, 16);
-	signal coefficient_02_TB : unsigned(15 downto 0) := to_unsigned(254, 16);
-	signal coefficient_03_TB : unsigned(15 downto 0) := to_unsigned(671, 16);
-	signal coefficient_04_TB : unsigned(15 downto 0) := to_unsigned(1248, 16);
-	signal coefficient_05_TB : unsigned(15 downto 0) := to_unsigned(1773, 16);
-	signal coefficient_06_TB : unsigned(15 downto 0) := to_unsigned(1987, 16);
+	signal coefficient_01_TB : unsigned(15 downto 0) := to_unsigned(45, 16);
+	signal coefficient_02_TB : unsigned(15 downto 0) := to_unsigned(238, 16);
+	signal coefficient_03_TB : unsigned(15 downto 0) := to_unsigned(652, 16);
+	signal coefficient_04_TB : unsigned(15 downto 0) := to_unsigned(1246, 16);
+	signal coefficient_05_TB : unsigned(15 downto 0) := to_unsigned(1798, 16);
+	signal coefficient_06_TB : unsigned(15 downto 0) := to_unsigned(2026, 16);
     signal filter_input_TB : unsigned(9 downto 0) := (others => '0');
     signal filter_output_TB : unsigned(31 downto 0) := (others => '0');
 
+    signal filter_input_TB_std : std_logic_vector(9 downto 0) := (others => '0');
+    signal filter_output_TB_std : std_logic_vector(31 downto 0) := (others => '0');
 
 begin
+
+    filter_input_TB_std <= std_logic_vector(filter_input_TB);
+    filter_output_TB_std <= std_logic_vector(filter_output_TB);
 
     -- Instantiate the FIR Filter
     UUT : FIR_Filter_Plus_SG
@@ -62,10 +67,10 @@ begin
             filter_output_signal => filter_output_TB
         );
 
-   -- Clocking process (1MHz clock)
+   -- Clocking process (10 MHz clock)
 	clock_process : process
 	begin
-		wait for 0.1 us;
+		wait for 0.05 us;
 		clk_TB <= not clk_TB;
 	end process clock_process;
 
@@ -74,42 +79,19 @@ begin
         reset_TB <= '1';
         wait for 1 us;
         reset_TB <= '0';
-        
-        wait for 40 us;
+
+        wait for 100 us;
         reset_TB <= '1';
         wait for 3 us;
         coefficient_00_TB <= to_unsigned(0, 16);
-        coefficient_01_TB <= to_unsigned(49, 16);
-        coefficient_02_TB <= to_unsigned(248, 16);
-        coefficient_03_TB <= to_unsigned(664, 16);
-        coefficient_04_TB <= to_unsigned(1247, 16);
-        coefficient_05_TB <= to_unsigned(1783, 16);
-        coefficient_06_TB <= to_unsigned(2002, 16);
+        coefficient_01_TB <= to_unsigned(0, 16);
+        coefficient_02_TB <= to_unsigned(87, 16);
+        coefficient_03_TB <= to_unsigned(189, 16);
+        coefficient_04_TB <= to_unsigned(525, 16);
+        coefficient_05_TB <= to_unsigned(2410, 16);
+        coefficient_06_TB <= to_unsigned(3565, 16);
         reset_TB <= '0';
 
-        wait for 40 us;
-        reset_TB <= '1';
-        wait for 3 us;
-        coefficient_00_TB <= to_unsigned(0, 16);
-        coefficient_01_TB <= to_unsigned(45, 16);
-        coefficient_02_TB <= to_unsigned(238, 16);
-        coefficient_03_TB <= to_unsigned(652, 16);
-        coefficient_04_TB <= to_unsigned(1246, 16);
-        coefficient_05_TB <= to_unsigned(1798, 16);
-        coefficient_06_TB <= to_unsigned(2026, 16);
-        reset_TB <= '0';
-
-        wait for 40 us;
-        reset_TB <= '1';
-        wait for 3 us;
-        coefficient_00_TB <= to_unsigned(0, 16);
-        coefficient_01_TB <= to_unsigned(13, 16);
-        coefficient_02_TB <= to_unsigned(133, 16);
-        coefficient_03_TB <= to_unsigned(516, 16);
-        coefficient_04_TB <= to_unsigned(1215, 16);
-        coefficient_05_TB <= to_unsigned(1966, 16);
-        coefficient_06_TB <= to_unsigned(2298, 16);
-        reset_TB <= '0';
         wait;
     end process;
 
