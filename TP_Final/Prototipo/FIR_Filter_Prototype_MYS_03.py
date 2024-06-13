@@ -41,33 +41,21 @@ def input_signal(f, f_sampling, N):
     t = np.linspace(0, (N-1)/f_sampling, N)
 
     # Signal
-    x = np.cos(2 * np.pi * f * t) 
+    x = np.zeros(N)
 
     # Add harmonics
-    f_H1 = 1.5e6
-    f_H2 = 1.3e6
-    f_H3 = 1.9e6
-    f_H4 = 2.9e6
-    f_H5 = 3.1e6
-    x = x + np.cos(2 * np.pi * f_H1 * t) + np.cos(2 * np.pi * f_H2 * t) + np.cos(2 * np.pi * f_H3 * t) + np.cos(2 * np.pi * f_H4 * t) + np.cos(2 * np.pi * f_H5 * t)
+    frequencies = [f,800e3, 850e3, 900e3, 950e3, 2e6]
+
+    for freq in frequencies:
+        x = x + np.cos(2 * np.pi * freq * t)
 
     # Add DC component
-    x = x + 6;
+    x = x + len(frequencies);
 
-    # NCO Parameters
-    Step_H0 = f*32767/f_sampling    
-    Step_H1 = f_H1*32767/f_sampling 
-    Step_H2 = f_H2*32767/f_sampling 
-    Step_H3 = f_H3*32767/f_sampling 
-    Step_H4 = f_H4*32767/f_sampling 
-    Step_H5 = f_H5*32767/f_sampling
+    # Calculate the phase stepping for each frequency for NCO config.
 
-    print("Step_H0: ", Step_H0)
-    print("Step_H1: ", Step_H1)
-    print("Step_H2: ", Step_H2)
-    print("Step_H3: ", Step_H3)
-    print("Step_H4: ", Step_H4)
-    print("Step_H5: ", Step_H5)
+    for i in frequencies:
+        print("Step_H", i, ": ", i*32767/f_sampling)
 
     return x
 
@@ -119,7 +107,7 @@ def plot_fir_response(h, f_sampling):
     plt.title("FIR Filter's Magnitude Response", fontsize=10)
     plt.ylabel('Magnitude [dB]', fontsize=10)
     plt.xlabel('Frequency [kHz]', fontsize=10)
-    # plt.xlim([0, 5*f_cutoff/1000]) # Set x-axis limits
+    plt.xlim([0, 5e3]) # Set x-axis limits
     plt.ylim([-15, 81]) # Set y-axis limits
     plt.yticks(np.arange(-15, 82, 12)) # Set y-axis ticks
     plt.grid()
@@ -130,7 +118,7 @@ def plot_fir_response(h, f_sampling):
     plt.title("FIR Filter's Phase Response", fontsize=10)
     plt.ylabel('Phase [degrees]', fontsize=10)
     plt.xlabel('Frequency [kHz]', fontsize=10)
-    # plt.xlim([0, 5*f_cutoff/1000]) # Set x-axis limits
+    plt.xlim([0, 5e3]) # Set x-axis limits
     plt.ylim([-180, 180]) # Set y-axis limits
     plt.yticks(np.arange(-180, 181, 45)) # Set y-axis ticks
     plt.grid()
@@ -139,20 +127,7 @@ def plot_fir_response(h, f_sampling):
     plt.subplots_adjust(hspace=0.5)
 
     # Save plot as .png file and display it
-    plt.savefig('Plots/P04_100_Plot_01.png', dpi=300) # Save plot as .png file
-
-    # Grafica la magnitud de la respuesta en frecuencia sola
-    plt.figure()
-    plt.plot(freq_hz/1000, mag_response_db)
-    plt.title("FIR Filter's Magnitude Response", fontsize=10)
-    plt.ylabel('Magnitude [dB]', fontsize=10)
-    plt.xlabel('Frequency [kHz]', fontsize=10)
-    plt.xlim([0, 5*f_cutoff/1000]) # Set x-axis limits
-    plt.ylim([-15, 80]) # Set y-axis limits
-    plt.yticks(np.arange(-15, 82, 12)) # Set y-axis ticks
-
-    # Save plot as .png file and display it
-    # plt.savefig('Plots/P04_100_Plot_02.png', dpi=300) # Save plot as .png file
+    plt.savefig('Plots/Test_Frequency.png', dpi=300) # Save plot as .png file
  
 # ---------------------------------------------------------------------------------------------- #
 
@@ -165,7 +140,7 @@ def plot_input_output(x,y):
     # Plot x and y in two subplots:
     plt.subplot(2, 1, 1)
     plt.plot(np.linspace(0, N, N), x, color='#1f77b4')  # Plot x
-    plt.title('Implemented Filter\'s Input Signal', fontsize=10)  # Set title and font size
+    plt.title('FIR Filter\'s Input Signal', fontsize=10)  # Set title and font size
     plt.xlabel('Samples', fontsize=10)  # Set x-axis label and font size
     plt.ylabel('Amplitude', fontsize=10)  # Set y-axis label and font size
     plt.xlim([0, 800]) # Set x-axis limits
@@ -175,7 +150,7 @@ def plot_input_output(x,y):
 
     plt.subplot(2, 1, 2)
     plt.plot(np.linspace(0, N, N), y, color='#ff7f0e') # Plot y
-    plt.title('Implemented Filter\'s Output Signal', fontsize=10)  # Set title and font size
+    plt.title('FIR Filter\'s Output Signal', fontsize=10)  # Set title and font size
     plt.xlabel('Samples', fontsize=10)  # Set x-axis label and font size
     plt.ylabel('Amplitude', fontsize=10)  # Set y-axis label and font size
     plt.xlim([0, 800]) # Set x-axis limits
@@ -187,7 +162,7 @@ def plot_input_output(x,y):
     plt.subplots_adjust(hspace=0.5)
 
     # Save plot as .png file and display it
-    plt.savefig('Plots/P04_100_Plot_00.png', dpi=300) # Save plot as .png file
+    plt.savefig('Plots/Test_Time.png', dpi=300) # Save plot as .png file
 
 # ---------------------------------------------------------------------------------------------- #
 
@@ -196,15 +171,13 @@ def plot_input_output(x,y):
 # ---------------------------------------------------------------------------------------------- #
 
 N = 2001 # Signal length.
-M = 13 # Filter length.
-f = 55e3 # Signal frequency.
+M = 31 # Filter length.
+f = 50e3 # Signal frequency.
 f_sampling = 10e6 # Sampling frequency.
 
-f_cutoff = 70e3
-# f_cutoff = 500e3 # Cutoff frequency
-f_cutoff = 1e6 # Cutoff frequency
-# f_cutoff = 1500e3# Cutoff frequency
-f_cutoff = 2e6 # Cutoff frequency
+f_cutoff = 60e3
+f_cutoff = 500e3 # Cutoff frequency
+f_cutoff = 700e3 # Cutoff frequency
 
 # Generate filter coefficients.
 h = np.floor(filter_response(f_cutoff/f_sampling, M)*10000)
@@ -216,7 +189,7 @@ h = np.abs(h)
 h_modified_sum = np.sum(h)
 h = np.floor(h / h_modified_sum * h_original_sum)
 
-print(h)
+print("Filter coefficients: ", h)
 
 # Generate input signal.
 x = input_signal(f, f_sampling, N)

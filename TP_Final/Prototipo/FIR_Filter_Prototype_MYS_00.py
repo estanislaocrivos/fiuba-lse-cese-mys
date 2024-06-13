@@ -1,12 +1,12 @@
 '''
 
-CESE CO20 - CLP [Trabajo Final]
+CESE CO20 - MYS [Trabajo Final]
 
 Author: Estanislao Crivos
-Date: April 2024
+Date: June 2024
 
 This file implements a simple FIR filter prototype. The filter is a low-pass windowed-sinc 
-(blackman window) filter. An example input signal with added white noise is computed to test the 
+(using a blackman window) filter. An example input signal is computed to test the 
 filter response.
 
 '''
@@ -41,14 +41,33 @@ def input_signal(f, f_sampling, N):
     t = np.linspace(0, (N-1)/f_sampling, N)
 
     # Signal
-    x = np.cos(2 * np.pi * f * t)
+    x = np.cos(2 * np.pi * f * t) 
 
-    for i in range(10):
-        f_actual = 350000 + (i * 1000)  # Incrementa la frecuencia en pasos de 1000 Hz
-        x = x + np.cos(2 * np.pi * f_actual * t)
+    # Add harmonics
+    f_H1 = 1.5e6
+    f_H2 = 1.3e6
+    f_H3 = 1.9e6
+    f_H4 = 2.9e6
+    f_H5 = 3.1e6
+    x = x + np.cos(2 * np.pi * f_H1 * t) + np.cos(2 * np.pi * f_H2 * t) + np.cos(2 * np.pi * f_H3 * t) + np.cos(2 * np.pi * f_H4 * t) + np.cos(2 * np.pi * f_H5 * t)
 
-    # Add noise
-    # x = x + np.random.normal(0, 0.5, N)
+    # Add DC component
+    x = x + 6;
+
+    # Calculate the phase stepping for each harmonic for NCO config.
+    Step_H0 = f*32767/f_sampling    
+    Step_H1 = f_H1*32767/f_sampling 
+    Step_H2 = f_H2*32767/f_sampling 
+    Step_H3 = f_H3*32767/f_sampling 
+    Step_H4 = f_H4*32767/f_sampling 
+    Step_H5 = f_H5*32767/f_sampling
+
+    # print("Step_H0: ", Step_H0)
+    # print("Step_H1: ", Step_H1)
+    # print("Step_H2: ", Step_H2)
+    # print("Step_H3: ", Step_H3)
+    # print("Step_H4: ", Step_H4)
+    # print("Step_H5: ", Step_H5)
 
     return x
 
@@ -97,21 +116,21 @@ def plot_fir_response(h, f_sampling):
     plt.figure()
     plt.subplot(2, 1, 1)
     plt.plot(freq_hz/1000, mag_response_db)
-    plt.title("FIR Filter Prototype's Magnitude Response", fontsize=10)
+    plt.title("FIR Filter's Magnitude Response", fontsize=10)
     plt.ylabel('Magnitude [dB]', fontsize=10)
     plt.xlabel('Frequency [kHz]', fontsize=10)
-    plt.xlim([0, 5*f_cutoff/1000]) # Set x-axis limits
-    plt.ylim([-84, 0]) # Set y-axis limits
-    plt.yticks(np.arange(-84, 1, 12)) # Set y-axis ticks
+    plt.xlim([0, 5e3]) # Set x-axis limits
+    plt.ylim([-15, 81]) # Set y-axis limits
+    plt.yticks(np.arange(-15, 82, 12)) # Set y-axis ticks
     plt.grid()
 
     # Grafica la fase de la respuesta en frecuencia
     plt.subplot(2, 1, 2)
     plt.plot(freq_hz/1000, phase_response_wrapped_deg)
-    plt.title("FIR Filter Protoype's Phase Response", fontsize=10)
+    plt.title("FIR Filter's Phase Response", fontsize=10)
     plt.ylabel('Phase [degrees]', fontsize=10)
     plt.xlabel('Frequency [kHz]', fontsize=10)
-    plt.xlim([0, 5*f_cutoff/1000]) # Set x-axis limits
+    plt.xlim([0, 5e3]) # Set x-axis limits
     plt.ylim([-180, 180]) # Set y-axis limits
     plt.yticks(np.arange(-180, 181, 45)) # Set y-axis ticks
     plt.grid()
@@ -120,20 +139,20 @@ def plot_fir_response(h, f_sampling):
     plt.subplots_adjust(hspace=0.5)
 
     # Save plot as .png file and display it
-    plt.savefig('Plots/P01_Plot_01.png', dpi=300) # Save plot as .png file
+    plt.savefig('Plots/Plot_1MHz_01.png', dpi=300) # Save plot as .png file
 
     # Grafica la magnitud de la respuesta en frecuencia sola
     plt.figure()
     plt.plot(freq_hz/1000, mag_response_db)
-    plt.title("FIR Filter Prototype's Magnitude Response", fontsize=10)
+    plt.title("FIR Filter's Magnitude Response", fontsize=10)
     plt.ylabel('Magnitude [dB]', fontsize=10)
     plt.xlabel('Frequency [kHz]', fontsize=10)
     plt.xlim([0, 5*f_cutoff/1000]) # Set x-axis limits
-    plt.ylim([-84, 0]) # Set y-axis limits
-    plt.yticks(np.arange(-84, 1, 12)) # Set y-axis ticks
+    plt.ylim([-15, 80]) # Set y-axis limits
+    plt.yticks(np.arange(-15, 82, 12)) # Set y-axis ticks
 
     # Save plot as .png file and display it
-    plt.savefig('Plots/P01_Plot_02.png', dpi=300) # Save plot as .png file
+    # plt.savefig('Plots/Plot_1MHz_02.png', dpi=300) # Save plot as .png file
  
 # ---------------------------------------------------------------------------------------------- #
 
@@ -146,29 +165,29 @@ def plot_input_output(x,y):
     # Plot x and y in two subplots:
     plt.subplot(2, 1, 1)
     plt.plot(np.linspace(0, N, N), x, color='#1f77b4')  # Plot x
-    plt.title("FIR Filter Prototype's Input Signal", fontsize=10)
+    plt.title('FIR Filter\'s Input Signal', fontsize=10)  # Set title and font size
     plt.xlabel('Samples', fontsize=10)  # Set x-axis label and font size
     plt.ylabel('Amplitude', fontsize=10)  # Set y-axis label and font size
-    plt.xlim([0,  400]) # Set x-axis limits
-    plt.ylim([-10, 10])  # Set y-axis limits
-    plt.yticks(np.arange(-10, 11, 5))  # Cambia el paso según tus necesidades
+    plt.xlim([0, 800]) # Set x-axis limits
+    plt.ylim([0, 12])  # Set y-axis limits
+    plt.yticks(np.arange(0, 13, 3))  # Cambia el paso según tus necesidades
     plt.grid() # Enable grid
 
     plt.subplot(2, 1, 2)
     plt.plot(np.linspace(0, N, N), y, color='#ff7f0e') # Plot y
-    plt.title("FIR Filter Prototype's Output Signal", fontsize=10)
+    plt.title('FIR Filter\'s Output Signal', fontsize=10)  # Set title and font size
     plt.xlabel('Samples', fontsize=10)  # Set x-axis label and font size
     plt.ylabel('Amplitude', fontsize=10)  # Set y-axis label and font size
-    plt.xlim([0, 400]) # Set x-axis limits
-    plt.ylim([-4, 4])  # Set y-axis limits
-    plt.yticks(np.arange(-4, 5, 1))  # Cambia el paso según tus necesidades
+    plt.xlim([0, 800]) # Set x-axis limits
+    plt.ylim([0, 80000])  # Set y-axis limits
+    plt.yticks(np.arange(0, 80001, 20000))  # Cambia el paso según tus necesidades
     plt.grid() # Enable grid
 
     # Adjust subplots layout
     plt.subplots_adjust(hspace=0.5)
 
     # Save plot as .png file and display it
-    plt.savefig('Plots/P01_Plot_00.png', dpi=300) # Save plot as .png file
+    plt.savefig('Plots/Plot_1MHz_00.png', dpi=300) # Save plot as .png file
 
 # ---------------------------------------------------------------------------------------------- #
 
@@ -176,16 +195,25 @@ def plot_input_output(x,y):
 
 # ---------------------------------------------------------------------------------------------- #
 
-N = 1001 # Signal length.
+N = 2001 # Signal length.
 M = 13 # Filter length.
-f = 50000 # Signal frequency.
-f_sampling = 1000000 # Sampling frequency.
-f_cutoff = 100000 # Cutoff frequency 
+f = 55e3 # Signal frequency.
+f_sampling = 10e6 # Sampling frequency.
+
+f_cutoff = 70e3
+# f_cutoff = 1e6 # Cutoff frequency
+# f_cutoff = 2e6 # Cutoff frequency
 
 # Generate filter coefficients.
-h = filter_response(f_cutoff/f_sampling, M)
-# h = np.array([0, 0, 75, 430, 1200, 2100, 2500, 2100, 1200, 430, 75, 0, 0])
-sum_coefficients = np.sum(h)
+h = np.floor(filter_response(f_cutoff/f_sampling, M)*10000)
+
+# Para algunas frecuencias de corte resultan valores negativos en algunos coeficientes, pero yo necesito todos positivos por trabajar con unsigned types. Por ello tomo el valor absoluto de los coeficientes y luego los normalizo para que la suma de los coeficientes sea igual a la suma de los coeficientes originales:
+
+# h_original_sum = np.sum(h)
+# h = np.abs(h)
+# h_modified_sum = np.sum(h)
+# h = np.floor(h / h_modified_sum * h_original_sum)
+
 print(h)
 
 # Generate input signal.
@@ -197,11 +225,6 @@ y = np.zeros_like(x)
 for i in range(M, N):
     # Convolve filter with signal.
     y[i] = np.sum(h * x[i-M+1:i+1])
-
-# y = y/sum_coefficients
-# h = h/10000
-
-print(sum_coefficients)
 
 plot_input_output(x,y)
 
