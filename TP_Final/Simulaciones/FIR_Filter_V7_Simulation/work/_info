@@ -23,9 +23,9 @@ VS7M[2lT2h8SK_cPh7?9BE2
 !s100 QOLe_ZFWDABGhCI6N9IR:0
 Z8 OV;C;10.5b;63
 32
-Z9 !s110 1718318860
+Z9 !s110 1718325691
 !i10b 1
-Z10 !s108 1718318860.000000
+Z10 !s108 1718325691.000000
 Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/acum_fase.vhd|
 Z12 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/acum_fase.vhd|
 !i113 1
@@ -232,11 +232,11 @@ VboCo>loNZU=flnMR@gBiQ1
 !s100 SJYK[[IeR]lNoAP3bbm;W2
 R8
 32
-R9
+Z37 !s110 1718325692
 !i10b 1
 R10
-Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/Signal_Generator.vhd|
-Z38 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/Signal_Generator.vhd|
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/Signal_Generator.vhd|
+Z39 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/Signal_Generator.vhd|
 !i113 1
 R13
 R14
@@ -252,11 +252,11 @@ VFSRJKnePE4TKjC9TIT^b>2
 !s100 @fMI6`Ak>Q5Uk=IOaf:af1
 R8
 32
-R9
+R37
 !i10b 1
 R10
-R37
 R38
+R39
 !i113 1
 R13
 R14
@@ -266,19 +266,19 @@ R2
 R3
 R4
 R5
-Z39 8C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_cos.vhd
-Z40 FC:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_cos.vhd
+Z40 8C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_cos.vhd
+Z41 FC:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_cos.vhd
 l0
 L5
 VnM_NPn[XH;[EdB1hXVE@D3
 !s100 zgZ58_<9AGLN`MC>BZN`o1
 R8
 32
-R9
+R37
 !i10b 1
-R10
-Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_cos.vhd|
-Z42 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_cos.vhd|
+Z42 !s108 1718325692.000000
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_cos.vhd|
+Z44 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_cos.vhd|
 !i113 1
 R13
 R14
@@ -293,11 +293,11 @@ VH2oX;P7CVhlLB:f;c:LTB0
 !s100 gDcCTYO4T9SHizO;JReN23
 R8
 32
-R9
+R37
 !i10b 1
-R10
-R41
 R42
+R43
+R44
 !i113 1
 R13
 R14
@@ -308,19 +308,19 @@ R2
 R3
 R4
 R5
-Z43 8C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_rom.vhd
-Z44 FC:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_rom.vhd
+Z45 8C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_rom.vhd
+Z46 FC:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_rom.vhd
 l0
 L11
 VG_0NodMBX9Q4]HboGUh_Z2
 !s100 UdfPYF[H>oXYiS4Jol[Ml3
 R8
 32
-R9
+R37
 !i10b 1
-R10
-Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_rom.vhd|
-Z46 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_rom.vhd|
+R42
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_rom.vhd|
+Z48 !s107 C:/Users/Lenovo/Desktop/CESE/CESE_MYS/TP_Final/Fuentes VHDL/FIR_Filter_V7/NCO_Signal Generator/sin_rom.vhd|
 !i113 1
 R13
 R14
@@ -329,18 +329,18 @@ R1
 R2
 R3
 R4
-Z47 DEx4 work 7 sin_rom 0 22 G_0NodMBX9Q4]HboGUh_Z2
+Z49 DEx4 work 7 sin_rom 0 22 G_0NodMBX9Q4]HboGUh_Z2
 l58
 L25
-Z48 VYM9[TU1DJGf`8j2PeNoSz0
-Z49 !s100 GU?9iBIHmc^<:SjfR54>k2
+Z50 VYM9[TU1DJGf`8j2PeNoSz0
+Z51 !s100 GU?9iBIHmc^<:SjfR54>k2
 R8
 32
-R9
+R37
 !i10b 1
-R10
-R45
-R46
+R42
+R47
+R48
 !i113 1
 R13
 R14
