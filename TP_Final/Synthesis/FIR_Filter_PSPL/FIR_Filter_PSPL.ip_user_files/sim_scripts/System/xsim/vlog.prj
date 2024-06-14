@@ -1,0 +1,9 @@
+verilog xil_defaultlib --include "../../../../FIR_Filter_PSPL.srcs/sources_1/bd/System/ipshared/ec67/hdl" --include "../../../../FIR_Filter_PSPL.srcs/sources_1/bd/System/ipshared/02c8/hdl/verilog" --include "../../../../FIR_Filter_PSPL.srcs/sources_1/bd/System/ipshared/b193/hdl" --include "../../../../FIR_Filter_PSPL.srcs/sources_1/bd/System/ipshared/4903" --include "../../../../FIR_Filter_PSPL.srcs/sources_1/bd/System/ipshared/6180/hdl/verilog" --include "../../../../FIR_Filter_PSPL.srcs/sources_1/bd/System/ipshared/a08d/hdl/verilog" --include "../../../../FIR_Filter_PSPL.srcs/sources_1/bd/System/ipshared/2875/hdl/verilog" --include "../../../../FIR_Filter_PSPL.srcs/sources_1/bd/System/ipshared/2c14/hdl/verilog" \
+"../../../bd/System/ip/System_processing_system7_0_0/sim/System_processing_system7_0_0.v" \
+"../../../bd/System/ip/System_clk_wiz_0_0/System_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/System/ip/System_clk_wiz_0_0/System_clk_wiz_0_0.v" \
+"../../../bd/System/ip/System_auto_pc_0/sim/System_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
