@@ -44,7 +44,7 @@ def input_signal(f, f_sampling, N):
     x = np.zeros(N)
 
     # Add harmonics
-    frequencies = [f, 800e3, 850e3, 900e3, 950e3, 2e6]
+    frequencies = [f,800e3, 850e3, 900e3, 950e3, 2e6]
 
     for freq in frequencies:
         x = x + np.cos(2 * np.pi * freq * t)
@@ -75,35 +75,57 @@ def filter_response(f_cutoff, M):
     h = h * np.blackman(M)
 
     # Normalize to get unity gain.
-    h = h / np.sum(h)
+    h = np.floor(h / np.sum(h) * 10000)
+    h_original_sum = np.sum(h)
+    h = np.abs(h)
+    h_modified_sum = np.sum(h)
+    h = np.floor(h / h_modified_sum * h_original_sum)   
 
     return h
 
 # ---------------------------------------------------------------------------------------------- #
 
-def plot_fir_response(h, f_sampling):
+def plot_fir_response(h_1, h_2, h_3, f_sampling):
     # Calcula la respuesta en frecuencia del filtro FIR
-    w, mag_response = freqz(h)
+    w, response_1 = freqz(h_1)
+    w, response_2 = freqz(h_2)
+    w, response_3 = freqz(h_3)
 
     # Calcula la magnitud en dB
-    mag_response_db = 20 * np.log10(np.abs(mag_response))
+    mag_response_1_db = 20 * np.log10(np.abs(response_1))
+    mag_response_2_db = 20 * np.log10(np.abs(response_2))
+    mag_response_3_db = 20 * np.log10(np.abs(response_3))
 
     # Calcula la fase en grados
-    phase_response_deg = np.angle(mag_response, deg=True)
+    phase_response_1_deg = np.angle(response_1, deg=True)
+    phase_response_2_deg = np.angle(response_2, deg=True)
+    phase_response_3_deg = np.angle(response_3, deg=True)
 
-    phase_response_rad = np.deg2rad(phase_response_deg)  # Convertir a radianes
-    phase_response_unwrapped_rad = np.unwrap(phase_response_rad)  # Realizar phase unwrap
-    phase_response_unwrapped_deg = np.rad2deg(phase_response_unwrapped_rad)  # Convertir de nuevo a grados
-    # phase_response_wrapped_deg = np.mod(phase_response_unwrapped_deg, 360)  # Realizar phase wrap
-    phase_response_wrapped_deg = np.remainder(phase_response_unwrapped_deg + 180, 360) - 180  # Realizar phase wrap
+    # Realiza el phase unwrap
+    phase_response_1_rad = np.deg2rad(phase_response_1_deg)  # Convertir a radianes
+    phase_response_1_unwrapped_rad = np.unwrap(phase_response_1_rad)  # Realizar phase unwrap
+    phase_response_1_unwrapped_deg = np.rad2deg(phase_response_1_unwrapped_rad)  # Convertir de nuevo a grados
+
+    phase_response_2_rad = np.deg2rad(phase_response_2_deg)  # Convertir a radianes
+    phase_response_2_unwrapped_rad = np.unwrap(phase_response_2_rad)  # Realizar phase unwrap
+    phase_response_2_unwrapped_deg = np.rad2deg(phase_response_2_unwrapped_rad)  # Convertir de nuevo a grados
+
+    phase_response_3_rad = np.deg2rad(phase_response_3_deg)  # Convertir a radianes
+    phase_response_3_unwrapped_rad = np.unwrap(phase_response_3_rad)  # Realizar phase unwrap
+    phase_response_3_unwrapped_deg = np.rad2deg(phase_response_3_unwrapped_rad)  # Convertir de nuevo a grados
 
     # Convierte la frecuencia de radianes a Hertz
     freq_hz = w * f_sampling / (2 * np.pi)
 
+    frequencies = [50e3/1000, 800e3/1000, 850e3/1000, 900e3/1000, 950e3/1000, 2e6/1000]
+
     # Grafica la magnitud de la respuesta en frecuencia
-    plt.figure()
+    plt.figure(figsize=(8, 6))
     plt.subplot(2, 1, 1)
-    plt.plot(freq_hz/1000, mag_response_db)
+    plt.plot(freq_hz/1000, mag_response_1_db, label='$f_{cutoff}$ = 60 kHz')
+    plt.plot(freq_hz/1000, mag_response_2_db, label='$f_{cutoff}$ = 500 kHz')
+    plt.plot(freq_hz/1000, mag_response_3_db, label='$f_{cutoff}$ = 700 kHz')
+    plt.vlines(x=frequencies, ymin=-15, ymax=81, color='r', linestyle='--', label='Harmonics')
     plt.title("FIR Filter's Magnitude Response", fontsize=10)
     plt.ylabel('Magnitude [dB]', fontsize=10)
     plt.xlabel('Frequency [kHz]', fontsize=10)
@@ -111,23 +133,28 @@ def plot_fir_response(h, f_sampling):
     plt.ylim([-15, 81]) # Set y-axis limits
     plt.yticks(np.arange(-15, 82, 12)) # Set y-axis ticks
     plt.grid()
+    plt.legend(loc='upper right')
 
     # Grafica la fase de la respuesta en frecuencia
     plt.subplot(2, 1, 2)
-    plt.plot(freq_hz/1000, phase_response_wrapped_deg)
+    plt.plot(freq_hz/1000, phase_response_1_unwrapped_deg)
+    plt.plot(freq_hz/1000, phase_response_2_unwrapped_deg)
+    plt.plot(freq_hz/1000, phase_response_3_unwrapped_deg)
+    plt.vlines(x=frequencies, ymin=-2250, ymax=0, color='r', linestyle='--')
     plt.title("FIR Filter's Phase Response", fontsize=10)
     plt.ylabel('Phase [degrees]', fontsize=10)
     plt.xlabel('Frequency [kHz]', fontsize=10)
     plt.xlim([0, 5e3]) # Set x-axis limits
-    plt.ylim([-180, 180]) # Set y-axis limits
-    plt.yticks(np.arange(-180, 181, 45)) # Set y-axis ticks
+    plt.ylim([-2250, 0]) # Set y-axis limits
+    # plt.yticks(np.arange(-2250, 1, 180)) # Set y-axis ticks
     plt.grid()
+    plt.legend()
 
     # Adjust subplots layout
     plt.subplots_adjust(hspace=0.5)
 
     # Save plot as .png file and display it
-    plt.savefig('Plots/Test_Frequency.png', dpi=300) # Save plot as .png file
+    plt.savefig('Plots/Multiple_Frequency.png', dpi=300) # Save plot as .png file
  
 # ---------------------------------------------------------------------------------------------- #
 
@@ -175,35 +202,33 @@ M = 31 # Filter length.
 f = 50e3 # Signal frequency.
 f_sampling = 10e6 # Sampling frequency.
 
-f_cutoff = 60e3
-f_cutoff = 500e3 # Cutoff frequency
-f_cutoff = 700e3 # Cutoff frequency
+f_cutoff_1 = 60e3
+f_cutoff_2 = 500e3 # Cutoff frequency
+f_cutoff_3 = 700e3 # Cutoff frequency
 
 # Generate filter coefficients.
-h = np.floor(filter_response(f_cutoff/f_sampling, M)*10000)
 
-# Para algunas frecuencias de corte resultan valores negativos en algunos coeficientes, pero yo necesito todos positivos por trabajar con unsigned types. Por ello tomo el valor absoluto de los coeficientes y luego los normalizo para que la suma de los coeficientes sea igual a la suma de los coeficientes originales:
+h_1 = filter_response(f_cutoff_1/f_sampling, M)
+h_2 = filter_response(f_cutoff_2/f_sampling, M)
+h_3 = filter_response(f_cutoff_3/f_sampling, M)
 
-h_original_sum = np.sum(h)
-h = np.abs(h)
-h_modified_sum = np.sum(h)
-h = np.floor(h / h_modified_sum * h_original_sum)
+plot_fir_response(h_1, h_2, h_3, f_sampling)
 
-print("Filter coefficients: ", h)
+# print("Filter coefficients: ", h)
 
-# Generate input signal.
-x = input_signal(f, f_sampling, N)
+# # Generate input signal.
+# x = input_signal(f, f_sampling, N)
 
-# Initialize output signal.
-y = np.zeros_like(x)
+# # Initialize output signal.
+# y = np.zeros_like(x)
 
-for i in range(M, N):
-    # Convolve filter with signal.
-    y[i] = np.sum(h * x[i-M+1:i+1])
+# for i in range(M, N):
+#     # Convolve filter with signal.
+#     y[i] = np.sum(h * x[i-M+1:i+1])
 
-plot_input_output(x,y)
+# plot_input_output(x,y)
 
-plot_fir_response(h, f_sampling)
+# plot_fir_response(h, f_sampling)
 
 # ---------------------------------------------------------------------------------------------- #
 
