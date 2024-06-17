@@ -1,5 +1,10 @@
-# CESE CO20 - MYS - Trabajos Prácticos [VHDL]
+# CESE CO20 - MYS - Trabajo Práctico Final
 
-En este repositorio se encuentran alojadas las resoluciones de los trabajos prácticos correspondientes a las semanas 1 y 2 y al trabajo práctico final de la materia Microarquitecturas y Softcores correspondiente a la CESE - FI UBA.
+En este repositorio se encuentra alojado el trabajo práctico final de la materia Microarquitecturas y Softcores correspondiente a la CESE - FI UBA.
 
-En la carpeta **TP_Final** se encuentran los archivos correspondientes a la resolución del proyecto final de la materia. En la subcarpeta **Fuentes** se encuentran los archivos fuente VHDL y C correspondientes a la resolución del trabajo. En la carpeta **Prototipo** se encuentran los archivos Pyhton correspondientes al prototipo que respalda la resolución del trabajo. La carpeta **Simulaciones** contiene la simulación del trabajo final. La carpeta **Synthesis** contiene el archivo de Vivado conteniendo la síntesis del proyecto.
+**Versiones finales de cada parte del proyecto:**
+
+Prototipo del filtro en Python: TP_Final/Prototipo/FIR_Filter_Prototype_MYS_04
+FIR Filter implementado en VHDL: TP_Final/Fuentes VHDL/FIR_Filter_V7
+Proyecto de Vivado: TP_Final/Synthesis/FIR_Filter_PSPL
+IP Core utilizado en el proyecto: TP_Final/Synthesis/FIR_Filter_EXTCLK_1_IP
