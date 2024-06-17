@@ -125,7 +125,8 @@ def plot_fir_response(h_1, h_2, h_3, f_sampling):
     plt.plot(freq_hz/1000, mag_response_1_db, label='$f_{cutoff}$ = 60 kHz')
     plt.plot(freq_hz/1000, mag_response_2_db, label='$f_{cutoff}$ = 500 kHz')
     plt.plot(freq_hz/1000, mag_response_3_db, label='$f_{cutoff}$ = 700 kHz')
-    plt.vlines(x=frequencies, ymin=-15, ymax=81, color='r', linestyle='--', label='Harmonics')
+    plt.vlines(x=frequencies[0], ymin=-15, ymax=81, color='b', linestyle='--', label='Fundamental')
+    plt.vlines(x=frequencies[1:], ymin=-15, ymax=81, color='r', linestyle='--', label='Harmonics')
     plt.title("FIR Filter's Magnitude Response", fontsize=10)
     plt.ylabel('Magnitude [dB]', fontsize=10)
     plt.xlabel('Frequency [kHz]', fontsize=10)
@@ -140,13 +141,14 @@ def plot_fir_response(h_1, h_2, h_3, f_sampling):
     plt.plot(freq_hz/1000, phase_response_1_unwrapped_deg)
     plt.plot(freq_hz/1000, phase_response_2_unwrapped_deg)
     plt.plot(freq_hz/1000, phase_response_3_unwrapped_deg)
-    plt.vlines(x=frequencies, ymin=-2250, ymax=0, color='r', linestyle='--')
+    plt.vlines(x=frequencies[0], ymin=-2250, ymax=0, color='b', linestyle='--')
+    plt.vlines(x=frequencies[1:], ymin=-2250, ymax=0, color='r', linestyle='--')    
     plt.title("FIR Filter's Phase Response", fontsize=10)
     plt.ylabel('Phase [degrees]', fontsize=10)
     plt.xlabel('Frequency [kHz]', fontsize=10)
     plt.xlim([0, 5e3]) # Set x-axis limits
     plt.ylim([-2250, 0]) # Set y-axis limits
-    # plt.yticks(np.arange(-2250, 1, 180)) # Set y-axis ticks
+    plt.yticks(np.arange(-2250, 1, 360)) # Set y-axis ticks
     plt.grid()
     plt.legend()
 
@@ -202,7 +204,7 @@ M = 31 # Filter length.
 f = 50e3 # Signal frequency.
 f_sampling = 10e6 # Sampling frequency.
 
-f_cutoff_1 = 60e3
+f_cutoff_1 = 60e3  # Cutoff frequency
 f_cutoff_2 = 500e3 # Cutoff frequency
 f_cutoff_3 = 700e3 # Cutoff frequency
 
