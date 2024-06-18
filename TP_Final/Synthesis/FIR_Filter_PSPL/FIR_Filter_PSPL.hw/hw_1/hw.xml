@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7z010_1_1" gui_info="dashboard1=hw_ila_1[xc7z010_1_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7z010_1_1/hw_ila_1/Status=ILA_STATUS_1;xc7z010_1_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7z010_1_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z010_1_1/hw_ila_1/Waveform=ILA_WAVE_1;]"/>
+  <device name="xc7z010_1_1" gui_info=""/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z010_1" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/System_wrapper.ltx"/>
@@ -37,7 +37,7 @@
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
-        <Option Id="DISPLAY_RADIX" value="UNSIGNED"/>
+        <Option Id="DISPLAY_RADIX" value="BINARY"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
@@ -73,7 +73,7 @@
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
-        <Option Id="DISPLAY_RADIX" value="UNSIGNED"/>
+        <Option Id="DISPLAY_RADIX" value="BINARY"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>

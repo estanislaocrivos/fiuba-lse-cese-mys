@@ -23,8 +23,8 @@ int main (void)
 	uint16_t Filter_Coefficients_700kHz[] = {0, 0, 2, 9, 21, 37, 49, 41, 10, 123, 307, 552, 826, 1081, 1261, 1326};
 
     // Select the filter coefficients array (uncomment line)
-	uint16_t *filter_coefficients = Filter_Coefficients_60kHz;
-	// uint16_t *filter_coefficients = Filter_Coefficients_500kHz;
+	// uint16_t *filter_coefficients = Filter_Coefficients_60kHz;
+	uint16_t *filter_coefficients = Filter_Coefficients_500kHz;
 	// uint16_t *filter_coefficients = Filter_Coefficients_700kHz;
 
 	// Reset = 1 (hold)
