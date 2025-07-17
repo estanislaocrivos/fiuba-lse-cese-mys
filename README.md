@@ -1,4 +1,4 @@
-# FIUBA LSE CESE CO20 - Microarchitectures and Softcores - Final Project
+# CESE LSE FIUBA CO20 - Microarchitectures and Softcores - Final Project
 
 ## Overview
 
